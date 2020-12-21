@@ -18,16 +18,16 @@ public class Powerable : MonoBehaviour
 
     private static string ANIM_PARAM_POWERED = "Powered";
 
-
-
-
     #region ACCESSORS
 
-    public PowerState CurrentState { 
-        get => _powerState;
-        set { 
+    public PowerState CurrentState {
+        get {
+            return _powerState;
+        }
+        private set { 
             if(_powerState != value) {
                 _powerState = value;
+
                 if (_powerState == PowerState.Powered) OnPoweredOn();
                 else OnPoweredOff();
             }
