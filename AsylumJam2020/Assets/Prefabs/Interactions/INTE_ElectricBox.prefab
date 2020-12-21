@@ -323,8 +323,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2837571227154120318}
   - component: {fileID: 6038735381330720308}
-  - component: {fileID: 2278246612673849530}
   - component: {fileID: 537829717560851147}
+  - component: {fileID: 8727940863119122246}
   m_Layer: 6
   m_Name: INTE_ElectricBox
   m_TagString: Untagged
@@ -366,19 +366,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2278246612673849530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9066505389595292659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0666c1d0b548fd542858670618807a00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _animator: {fileID: 6038735381330720308}
 --- !u!65 &537829717560851147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -392,3 +379,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.65, z: 0.15}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8727940863119122246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9066505389595292659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3613231da475f7a4f9a8cfcc855767a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 6038735381330720308}
+  _linkedPowerSources: []
