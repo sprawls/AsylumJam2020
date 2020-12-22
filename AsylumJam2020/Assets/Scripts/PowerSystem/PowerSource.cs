@@ -26,11 +26,16 @@ public class PowerSource : MonoBehaviour
 
     private void UpdatePower() {
         foreach(Powerable powerable in _powerables) {
-            if(_powered) {
-                powerable.AddPowerSource(this);
+            if(powerable != null) {
+                if (_powered) {
+                    powerable.AddPowerSource(this);
+                } else {
+                    powerable.RemovePowerSource(this);
+                }
             } else {
-                powerable.RemovePowerSource(this);
+                Debug.LogError("Powerable is null in power source !", gameObject);
             }
+
         }
     }
 

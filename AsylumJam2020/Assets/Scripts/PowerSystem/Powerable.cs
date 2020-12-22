@@ -15,6 +15,7 @@ public class Powerable : MonoBehaviour
 
     private PowerState _powerState;
     private List<PowerSource> _currentPowerSources;
+    private bool _isStarted = false;
 
     private static string ANIM_PARAM_POWERED = "Powered";
 
@@ -46,12 +47,26 @@ public class Powerable : MonoBehaviour
     #region LIFECYCLE
 
     protected virtual void Awake() {
+        _isStarted = false;
         _currentPowerSources = new List<PowerSource>(4);
         OnPoweredOff();
     }
 
     protected virtual void Start() {
         CheckPowered();
+        _isStarted = true;
+    }
+
+    private void OnEnable() {
+        if(_isStarted) {
+            CheckPowered();
+        }
+    }
+
+    private void OnDisable() {
+        if (_isStarted) {
+            CheckPowered();
+        }
     }
 
     #endregion
@@ -89,17 +104,11 @@ public class Powerable : MonoBehaviour
 
 
     private void CheckPowered() {
-        switch(CurrentState) {
-            case PowerState.Powered:
-                if (_currentPowerSources.Count < _amountPowerSourceNeeded) {
-                    CurrentState = PowerState.Unpowered;
-                }
-                break;
-            case PowerState.Unpowered:
-                if (_currentPowerSources.Count >= _amountPowerSourceNeeded) {
-                    CurrentState = PowerState.Powered;
-                }
-                break;
+        if (_currentPowerSources.Count < _amountPowerSourceNeeded) {
+            CurrentState = PowerState.Unpowered;
+        }
+        else if (_currentPowerSources.Count >= _amountPowerSourceNeeded) {
+            CurrentState = PowerState.Powered;
         }
     }
 

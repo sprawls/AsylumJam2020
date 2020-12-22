@@ -5,6 +5,7 @@ using UnityEngine;
 public class PowerInteraction : InteractionBase {
    
     [SerializeField] private List<PowerSource> _linkedPowerSources = default;
+    [SerializeField] private Renderer _cableVisionRenderer = default;
 
     #region ACCESSORS
 
@@ -22,6 +23,22 @@ public class PowerInteraction : InteractionBase {
 
 
     #region CALLBACK
+
+    public override void OnPoweredOn() {
+        base.OnPoweredOn();
+
+        if (_cableVisionRenderer != null) {
+            _cableVisionRenderer.material.color = CableVisioner.Powered_Color;
+        }
+    }
+
+    public override void OnPoweredOff() {
+        base.OnPoweredOff();
+
+        if (_cableVisionRenderer != null) {
+            _cableVisionRenderer.material.color = CableVisioner.Unpowered_Color;
+        }
+    }
 
     public override void Callback_OnHighlightedStart() {
         base.Callback_OnHighlightedStart();
