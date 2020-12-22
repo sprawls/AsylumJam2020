@@ -25,23 +25,33 @@ public class Powerable : MonoBehaviour
             return _powerState;
         }
         private set { 
-            if(_powerState != value) {
+            //if(_powerState != value) {
                 _powerState = value;
 
                 if (_powerState == PowerState.Powered) OnPoweredOn();
                 else OnPoweredOff();
-            }
+            //}
 
         }
     }
+
+    public bool Powered {
+        get { return CurrentState == PowerState.Powered; }
+    }
+
+    protected Animator Animator { get => _powerableAnimator; set => _powerableAnimator = value; }
 
     #endregion
 
     #region LIFECYCLE
 
-    private void Awake() {
+    protected virtual void Awake() {
         _currentPowerSources = new List<PowerSource>(4);
         OnPoweredOff();
+    }
+
+    protected virtual void Start() {
+        CheckPowered();
     }
 
     #endregion
@@ -49,14 +59,14 @@ public class Powerable : MonoBehaviour
     #region VIRTUAL
 
     public virtual void OnPoweredOn() {
-        if(_powerableAnimator != null) {
-            _powerableAnimator.SetBool(ANIM_PARAM_POWERED, true);
+        if(Animator != null) {
+            Animator.SetBool(ANIM_PARAM_POWERED, true);
         }
     }
 
     public virtual void OnPoweredOff() {
-        if (_powerableAnimator != null) {
-            _powerableAnimator.SetBool(ANIM_PARAM_POWERED, false);
+        if (Animator != null) {
+            Animator.SetBool(ANIM_PARAM_POWERED, false);
         }
     }
 
