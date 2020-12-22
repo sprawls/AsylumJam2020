@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Powerable : MonoBehaviour
 {
-
+    [Header("Power Requierement")]
     [SerializeField] private int _amountPowerSourceNeeded = 1;
+    [SerializeField] private bool _togglePowerEveryChange = false;
+
+    [Header("References")]
     [SerializeField] private Animator _powerableAnimator = default;
 
     public enum PowerState {
@@ -104,11 +107,14 @@ public class Powerable : MonoBehaviour
 
 
     private void CheckPowered() {
-        if (_currentPowerSources.Count < _amountPowerSourceNeeded) {
-            CurrentState = PowerState.Unpowered;
-        }
-        else if (_currentPowerSources.Count >= _amountPowerSourceNeeded) {
-            CurrentState = PowerState.Powered;
+        if (_togglePowerEveryChange) {
+            CurrentState = _amountPowerSourceNeeded % 2 == 0 ? PowerState.Unpowered :  PowerState.Powered;
+        } else {
+            if (_currentPowerSources.Count < _amountPowerSourceNeeded) {
+                CurrentState = PowerState.Unpowered;
+            } else if (_currentPowerSources.Count >= _amountPowerSourceNeeded) {
+                CurrentState = PowerState.Powered;
+            }
         }
     }
 
