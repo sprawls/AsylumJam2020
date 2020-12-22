@@ -5,24 +5,31 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEditor;
 
-[RequireComponent(typeof(AudioSource), typeof(SphereCollider))]
+[RequireComponent(typeof(AudioSource), typeof(SphereCollider), typeof(BoxCollider))]
 public class BasicAudioEventPlayer : MonoBehaviour
 {
     new AudioSource audio;
 
-    public int SelectedCasterType = 0;
-    public bool AmbianceType;
+    public bool RoomAmbiantType;
+    public bool ObjectAmbiantType;
     public bool InteractionType;
     public bool MixedType;
 
     [Space(20)]
-    public SphereCollider PlayerDetectionCollider;
+    public bool ReconfigureAudioSetUp;
+
+    [Space(20)]
+    public SphereCollider PlayerDetectionSphereCollider;
+    public BoxCollider PlayerDetectionBoxCollider;
     float detectionRadius;
     float maxDistanceToHear;
 
     [Space(20)]
     public AudioClip ambiantSound;
     public AudioClip[] PonctualSounds;
+
+
+    UnityEvent ReconfigureAudio;
 
     [Space(20)]
     public UnityEvent StartAudio;
@@ -31,48 +38,93 @@ public class BasicAudioEventPlayer : MonoBehaviour
     void Awake()
     {
         audio = GetComponent<AudioSource>();
-        PlayerDetectionCollider = GetComponent<SphereCollider>();
 
         audio.spatialBlend = 1f;
         audio.minDistance = 0.05f;
 
         maxDistanceToHear = audio.maxDistance;
-        PlayerDetectionCollider.radius = maxDistanceToHear + 5f;
+
+        PlayerDetectionBoxCollider = GetComponent<BoxCollider>();
+        PlayerDetectionSphereCollider = GetComponent<SphereCollider>();
+        PlayerDetectionBoxCollider.isTrigger = true;
+        PlayerDetectionSphereCollider.isTrigger = true;
+
+        ConfigureAudioSetUp();
     }
 
     void Start()
     {
-        if (ambiantSound != null && AmbianceType)
-        {
-            audio.clip = ambiantSound;
-            audio.loop = true;
-            audio.Play();
-            audio.Pause();
-        }
-        else if (PonctualSounds != null && InteractionType)
-        {
-            audio.loop = false;
-        }
-        else if (ambiantSound != null && MixedType)
-        {
-            audio.clip = ambiantSound;
-            audio.loop = true;
-            audio.Play();
-            audio.Pause();
-        }
-        else
-        {
-            audio.mute = true;
-            audio.Pause();
-        }
-
         audio.mute = true;
         audio.Pause();
     }
 
     void Update()
     {
+        if (ReconfigureAudioSetUp)
+        {
+            Invoke("ConfigureAudioSetUp",0.0f);
+        }
+    }
 
+    public void AmbiantAudioInit()
+    {
+        audio.clip = ambiantSound;
+        audio.loop = true;
+        audio.Play();
+        audio.Pause();
+    }
+
+    public void ConfigureAudioSetUp()
+    {
+        ReconfigureAudioSetUp = false;
+
+        if (ambiantSound != null && RoomAmbiantType)
+        {
+            PlayerDetectionSphereCollider.enabled = false;
+            PlayerDetectionBoxCollider.enabled = true;
+
+            PlayerDetectionBoxCollider.isTrigger = true;
+            PlayerDetectionBoxCollider.size = new Vector3(maxDistanceToHear + 5f, maxDistanceToHear + 5f, PlayerDetectionBoxCollider.size.y);
+
+            AmbiantAudioInit();
+        }
+        else if (ambiantSound != null && ObjectAmbiantType)
+        {
+            PlayerDetectionBoxCollider.enabled = false;
+            PlayerDetectionSphereCollider.enabled = true;
+
+            PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
+
+            AmbiantAudioInit();
+        }
+        else if (PonctualSounds != null && InteractionType)
+        {
+            PlayerDetectionBoxCollider.enabled = false;
+            PlayerDetectionSphereCollider.enabled = true;
+
+            PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
+            audio.loop = false;
+        }
+        else if (ambiantSound != null && MixedType)
+        {
+            PlayerDetectionBoxCollider.enabled = false;
+            PlayerDetectionSphereCollider.enabled = true;
+
+            PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
+
+            AmbiantAudioInit();
+        }
+        else
+        {
+            PlayerDetectionBoxCollider.enabled = false;
+            PlayerDetectionSphereCollider.enabled = true;
+
+            PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
+            audio.mute = true;
+            audio.Pause();
+        }
+
+        Debug.Log("AudioSource Reconfiguration Done");
     }
 
     private void OnTriggerEnter(Collider other)
