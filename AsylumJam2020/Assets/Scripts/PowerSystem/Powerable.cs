@@ -25,12 +25,12 @@ public class Powerable : MonoBehaviour
             return _powerState;
         }
         private set { 
-            if(_powerState != value) {
+            //if(_powerState != value) {
                 _powerState = value;
 
                 if (_powerState == PowerState.Powered) OnPoweredOn();
                 else OnPoweredOff();
-            }
+            //}
 
         }
     }

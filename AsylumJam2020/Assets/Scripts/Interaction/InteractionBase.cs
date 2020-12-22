@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class InteractionBase : Powerable
 {
+    public event Action<bool> OnInteractionTriggered;
+
     public enum InteractionState {
         NotHighlighted = 0,
         Highlighted = 1
@@ -65,15 +68,21 @@ public class InteractionBase : Powerable
         if(Powered) {
             if (Animator != null) {
                 Animator.SetTrigger(ANIM_PARAM_USE_HASH);
-                //Play Success SFX here
             }
+
+            //Play Success SFX here
+
+            if(OnInteractionTriggered != null) OnInteractionTriggered.Invoke(true);
         } else {
             if (Animator != null) {
                 Animator.SetTrigger(ANIM_PARAM_USE_FAIL_HASH);
-                //Play Fail SFX here
             }
+
+            //Play Fail SFX here
+
+            if (OnInteractionTriggered != null) OnInteractionTriggered.Invoke(false);
         }
-        
+
     }
 
     #endregion
