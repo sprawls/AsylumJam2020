@@ -23,14 +23,14 @@ Material:
     - _HorizonLineBlendMode: 1
     - _HorizonLineContribution: 0
     - _HorizonLineExponent: 5
-    - _SkyGradientExponent: 0.25
+    - _SkyGradientExponent: 0.1
     - _SunDiscContribution: 1
     - _SunDiscExponent: 100000
     - _SunDiscExponentSize: 12000
     - _SunDiscMultiplier: 100000
     - _SunDiscMultiplierSharpness: 1200
     - _SunHaloBlendMode: 0
-    - _SunHaloContribution: 0.047
+    - _SunHaloContribution: 0.027
     - _SunHaloExponent: 250
     - _View: 0
     - __dirty: 0
