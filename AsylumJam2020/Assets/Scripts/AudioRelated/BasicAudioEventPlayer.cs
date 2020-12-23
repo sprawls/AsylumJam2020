@@ -229,14 +229,16 @@ public class BasicAudioEventPlayer : MonoBehaviour
     {
         if (HoverSounds.Length != 0)
         {
-            audio.PlayOneShot(HoverSounds[0]);
+            int randNumb = UnityEngine.Random.Range(0, HoverSounds.Length);
+            audio.PlayOneShot(HoverSounds[randNumb]);
         }
     }
     public void PlayHoverOffSound()
     {
         if (HoverOffSounds.Length != 0)
         {
-            audio.PlayOneShot(HoverOffSounds[0]);
+            int randNumb = UnityEngine.Random.Range(0, HoverOffSounds.Length);
+            audio.PlayOneShot(HoverOffSounds[randNumb]);
         }
     }
 
@@ -245,14 +247,16 @@ public class BasicAudioEventPlayer : MonoBehaviour
     {
         if (InteractionONSounds.Length != 0)
         {
-            audio.PlayOneShot(InteractionONSounds[0]);
+            int randNumb = UnityEngine.Random.Range(0, InteractionONSounds.Length);
+            audio.PlayOneShot(InteractionONSounds[randNumb]);
         }
     }
     public void PlayInteractionOffSound()
     {
         if (InteractionOffSounds.Length != 0)
         {
-            audio.PlayOneShot(InteractionONSounds[0]);
+            int randNumb = UnityEngine.Random.Range(0, InteractionOffSounds.Length);
+            audio.PlayOneShot(InteractionONSounds[randNumb]);
         }
     }
 
