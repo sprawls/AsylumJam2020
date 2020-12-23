@@ -6,6 +6,8 @@ public class StateInteraction : InteractionBase
 {
     [SerializeField] private bool _stateActive = false;
 
+    [SerializeField] private bool _powerBased = false;
+
     private static string ANIM_PARAM_STATE = "StateActive";
     private static int ANIM_PARAM_STATE_HASH = -1;
 
@@ -37,7 +39,7 @@ public class StateInteraction : InteractionBase
     }
 
     public override void Callback_OnInteracted() {
-        if (Powered) {
+        if (Powered && !_powerBased) {
             base.Callback_OnInteracted();
 
             _stateActive = !_stateActive;
@@ -45,6 +47,22 @@ public class StateInteraction : InteractionBase
             UpdateAnimatorState();
         }
 
+    }
+
+    public override void OnPoweredOn() {
+        base.OnPoweredOn();
+
+        if(_powerBased) {
+            _stateActive = true;
+        }
+    }
+
+    public override void OnPoweredOff() {
+        base.OnPoweredOff();
+
+        if (_powerBased) {
+            _stateActive = false;
+        }
     }
 
 

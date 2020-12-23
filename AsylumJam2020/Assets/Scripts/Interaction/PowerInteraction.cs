@@ -27,7 +27,7 @@ public class PowerInteraction : InteractionBase {
 
     private void TogglePowerOnSource() {
         foreach (PowerSource source in _linkedPowerSources) {
-            source.TogglePower();
+            source.TogglePowering();
         }
     }
 

@@ -52,10 +52,10 @@ public class Powerable : MonoBehaviour
     protected virtual void Awake() {
         _isStarted = false;
         _currentPowerSources = new List<PowerSource>(4);
-        OnPoweredOff();
     }
 
     protected virtual void Start() {
+        OnPoweredOff();
         CheckPowered();
         _isStarted = true;
     }

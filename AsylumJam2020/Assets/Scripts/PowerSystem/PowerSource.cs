@@ -2,32 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerSource : MonoBehaviour
+public class PowerSource : Powerable
 {
 
     [SerializeField] private List<Powerable> _powerables;
-    [SerializeField] private bool _powered = false;
+    [SerializeField] private bool _isPowering = false;
 
     #region ACCESSORS
 
-    public bool Powered { 
-        get => _powered;
+    public bool IsPowering { 
+        get => _isPowering;
         set { 
-            _powered = value; 
+            _isPowering = value; 
             UpdatePower(); 
         }
     }
 
     #endregion
 
-    private void Start() {
+    public override void OnPoweredOn() {
+        base.OnPoweredOn();
+        UpdatePower();
+    }
+
+    public override void OnPoweredOff() {
+        base.OnPoweredOff();
+        UpdatePower();
+    }
+
+    protected override void Start() {
+        base.Start();
+
         UpdatePower();
     }
 
     private void UpdatePower() {
         foreach(Powerable powerable in _powerables) {
             if(powerable != null) {
-                if (_powered) {
+                if (_isPowering && Powered) {
                     powerable.AddPowerSource(this);
                 } else {
                     powerable.RemovePowerSource(this);
@@ -39,8 +51,8 @@ public class PowerSource : MonoBehaviour
         }
     }
 
-    public void TogglePower() {
-        Powered = !Powered;
+    public void TogglePowering() {
+        IsPowering = !IsPowering;
     }
 
 }
