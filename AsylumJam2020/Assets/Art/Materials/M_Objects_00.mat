@@ -93,9 +93,10 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FarSphereMaskMax: 0.628
+    - _FarSphereIntensity: 0.166
+    - _FarSphereMaskMax: 0.111
     - _FarSphereMaskMin: 1
-    - _FarSphereMaskSize: 0.68
+    - _FarSphereMaskSize: 0.71
     - _FarSphereSize: 10.9
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -111,9 +112,9 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SphereIntensity: 0.132
-    - _SphereMaskMax: 0.863
+    - _SphereMaskMax: 0.72
     - _SphereMaskMin: 1
-    - _SphereMaskSize: 1.93
+    - _SphereMaskSize: 2.46
     - _SphereSize: 35.1
     - _SrcBlend: 1
     - _StepMax: 0.99
@@ -121,6 +122,8 @@ Material:
     - _Surface: 0
     - _TestFloat: 0.64
     - _WorkflowMode: 1
+    - _WorldGradientHeight: 0.124
+    - _WorldGradientintensity: 0.02
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
