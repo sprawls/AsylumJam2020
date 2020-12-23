@@ -2,11 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Animator))]
 public class InteractionBase : Powerable
 {
     public event Action<bool> OnInteractionTriggered;
+
+    [HideInInspector] public UnityEvent HighlightedStartEvent;
+    [HideInInspector] public UnityEvent HighlightedStopEvent;
+    [HideInInspector] public UnityEvent InteractionOkEvent;
+    [HideInInspector] public UnityEvent InteractionFailEvent;
 
     public enum InteractionState {
         NotHighlighted = 0,
@@ -53,6 +59,8 @@ public class InteractionBase : Powerable
 
         if (Animator != null) {
             Animator.SetBool(ANIM_PARAM_HIGHLIGHT_HASH, true);
+
+            HighlightedStartEvent.Invoke();
         }
     }
 
@@ -61,6 +69,8 @@ public class InteractionBase : Powerable
 
         if (Animator != null) {
             Animator.SetBool(ANIM_PARAM_HIGHLIGHT_HASH, false);
+
+            HighlightedStopEvent.Invoke();
         }
     }
 
@@ -71,6 +81,7 @@ public class InteractionBase : Powerable
             }
 
             //Play Success SFX here
+            InteractionOkEvent.Invoke();
 
             if(OnInteractionTriggered != null) OnInteractionTriggered.Invoke(true);
         } else {
@@ -79,6 +90,7 @@ public class InteractionBase : Powerable
             }
 
             //Play Fail SFX here
+            InteractionFailEvent.Invoke();
 
             if (OnInteractionTriggered != null) OnInteractionTriggered.Invoke(false);
         }
