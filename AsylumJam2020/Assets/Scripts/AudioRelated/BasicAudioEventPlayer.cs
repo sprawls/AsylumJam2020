@@ -64,9 +64,6 @@ public class BasicAudioEventPlayer : MonoBehaviour
 
     void Start()
     {
-        audio.mute = true;
-        audio.Pause();
-
         CreateList();
     }
 
@@ -138,6 +135,8 @@ public class BasicAudioEventPlayer : MonoBehaviour
         audio.spatialBlend = 1f;
         audio.minDistance = 0.05f;
         maxDistanceToHear = audio.maxDistance;
+        audio.mute = true;
+        audio.Pause();
     }
 
     public void ConfigureAudioSetUp()
@@ -228,21 +227,33 @@ public class BasicAudioEventPlayer : MonoBehaviour
     // Highlight d'un objet
     public void PlayHoverSound()
     {
-        audio.PlayOneShot(HoverSounds[0]);
+        if (HoverSounds.Length != 0)
+        {
+            audio.PlayOneShot(HoverSounds[0]);
+        }
     }
     public void PlayHoverOffSound()
     {
-        audio.PlayOneShot(HoverOffSounds[0]);
+        if (HoverOffSounds.Length != 0)
+        {
+            audio.PlayOneShot(HoverOffSounds[0]);
+        }
     }
 
     // Pour interaction
     public void PlayInteractionOnSound()
     {
-        audio.PlayOneShot(InteractionONSounds[0]);
+        if (InteractionONSounds.Length != 0)
+        {
+            audio.PlayOneShot(InteractionONSounds[0]);
+        }
     }
     public void PlayInteractionOffSound()
     {
-        audio.PlayOneShot(InteractionONSounds[0]);
+        if (InteractionOffSounds.Length != 0)
+        {
+            audio.PlayOneShot(InteractionONSounds[0]);
+        }
     }
 
     //Ambiance

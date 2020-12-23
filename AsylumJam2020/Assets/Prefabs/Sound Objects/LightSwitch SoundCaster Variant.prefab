@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1201122076909404773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027866, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_Name
+      value: LightSwitch SoundCaster Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027866, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: AmbiantSound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: HoverSounds.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: HoverOffSounds.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: HoverOffSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionONSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionOffSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionONSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e055615a0b6519747a5c21802c8c0d4d, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionONSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: aaa4cc5ee8b15be42b9abfdfcc465c75, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionONSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3b52ab720d871994c8c4961addf6d8a9, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionONSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: d3f3ef628f2c8c24cb48dd216ac9f7a2, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionONSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d1078c4d059266479fea030f036e0ff, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionOffSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b82718e23590484d85892a9f1e92dab, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionOffSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 29e39d8107a70034483c728492a27429, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionOffSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b47c50138271890478d7d3c19a811479, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionOffSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 352b1808fb008e34e84f9cdb47fd48ce, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionOffSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 594aba68f56224945a22833c08fcbb20, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayHoverEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayHoverOffEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayInteractionOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayInteractionOnSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayInteractionOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayInteractionOffSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayInteractionOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BasicAudioEventPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayInteractionOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BasicAudioEventPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayInteractionOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayInteractionOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
