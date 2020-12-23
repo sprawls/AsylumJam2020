@@ -142,7 +142,6 @@ public class BasicAudioEventPlayer : MonoBehaviour
     {
         CheckSoundBanks();
 
-
         if (AmbiantSound != null && RoomAmbiantType)
         {
             PlayerDetectionSphereCollider.enabled = false;
