@@ -7,6 +7,8 @@ public class PowerInteraction : InteractionBase {
     [SerializeField] private List<PowerSource> _linkedPowerSources = default;
     [SerializeField] private Renderer _cableVisionRenderer = default;
 
+    [SerializeField] private bool _isActive = false;
+
     #region ACCESSORS
 
 
@@ -21,6 +23,16 @@ public class PowerInteraction : InteractionBase {
 
     #endregion
 
+    #region LOGIC
+
+    private void TogglePowerOnSource() {
+        foreach (PowerSource source in _linkedPowerSources) {
+            source.TogglePower();
+        }
+    }
+
+    #endregion
+
 
     #region CALLBACK
 
@@ -30,6 +42,10 @@ public class PowerInteraction : InteractionBase {
         if (_cableVisionRenderer != null) {
             _cableVisionRenderer.material.color = CableVisioner.Powered_Color;
         }
+
+        if (_isActive) {
+            TogglePowerOnSource();
+        }
     }
 
     public override void OnPoweredOff() {
@@ -37,6 +53,10 @@ public class PowerInteraction : InteractionBase {
 
         if (_cableVisionRenderer != null) {
             _cableVisionRenderer.material.color = CableVisioner.Unpowered_Color;
+        }
+
+        if(_isActive) {
+            TogglePowerOnSource();
         }
     }
 
@@ -49,12 +69,16 @@ public class PowerInteraction : InteractionBase {
     }
 
     public override void Callback_OnInteracted() {
-        base.Callback_OnInteracted();
+        if(Powered) {
+            base.Callback_OnInteracted();
 
-        foreach(PowerSource source in _linkedPowerSources) {
-            source.TogglePower();
+            _isActive = !_isActive;
+            TogglePowerOnSource();
         }
+
     }
+
+   
 
     #endregion
 
