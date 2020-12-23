@@ -33,14 +33,16 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public AudioClip AmbiantSound;
     public AudioClip[] HoverSounds;
     public AudioClip[] HoverOffSounds;
-    public AudioClip[] InteractionSounds;
+    public AudioClip[] InteractionONSounds;
+    public AudioClip[] InteractionOffSounds;
 
     [Space(20)]
     public UnityEvent PlayAudio;
     public UnityEvent StopAudio;
     public UnityEvent PlayHoverEvent;
     public UnityEvent PlayHoverOffEvent;
-    public UnityEvent PlayInteractionEvent;
+    public UnityEvent PlayInteractionOnEvent;
+    public UnityEvent PlayInteractionOffEvent;
 
     delegate void SoundsMethod();
 
@@ -91,9 +93,9 @@ public class BasicAudioEventPlayer : MonoBehaviour
         listenersOn = true;
         if (SoundInteractionSource != null)
         {
-            SoundInteractionSource.HighlightedStartEvent.AddListener(PlayHoverSound);
-            SoundInteractionSource.HighlightedStopEvent.AddListener(PlayHoverOffSound);
-            SoundInteractionSource.InteractionOkEvent.AddListener(PlayInteractionSound);
+            SoundInteractionSource.Event_Highlighted_Start.AddListener(PlayHoverSound);
+            SoundInteractionSource.Event_Highlighted_Stop.AddListener(PlayHoverOffSound);
+            SoundInteractionSource.Event_Interaction_On.AddListener(PlayInteractionOnSound);
 
             Debug.Log("listeners Added");
         }
@@ -103,9 +105,9 @@ public class BasicAudioEventPlayer : MonoBehaviour
         listenersOn = false;
         if (SoundInteractionSource != null)
         {
-            SoundInteractionSource.HighlightedStartEvent.RemoveListener(PlayHoverSound);
-            SoundInteractionSource.HighlightedStopEvent.RemoveListener(PlayHoverOffSound);
-            SoundInteractionSource.InteractionOkEvent.RemoveListener(PlayInteractionSound);
+            SoundInteractionSource.Event_Highlighted_Start.RemoveListener(PlayHoverSound);
+            SoundInteractionSource.Event_Highlighted_Stop.RemoveListener(PlayHoverOffSound);
+            SoundInteractionSource.Event_Interaction_On.RemoveListener(PlayInteractionOnSound);
 
             Debug.Log("listeners Removed");
         }
@@ -113,7 +115,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
 
     public void CheckSoundBanks()
     {
-        if (HoverSounds != null || HoverOffSounds != null || InteractionSounds != null)
+        if (HoverSounds != null || HoverOffSounds != null || InteractionONSounds != null)
         {
             PonctualSoundsEnabled = true;
         }
@@ -220,7 +222,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
         List<SoundsMethod> soundMethod = new List<SoundsMethod>();
         soundMethod.Add(PlayHoverSound);
         soundMethod.Add(PlayHoverOffSound);
-        soundMethod.Add(PlayInteractionSound);
+        soundMethod.Add(PlayInteractionOnSound);
     }
 
     // Highlight d'un objet
@@ -234,9 +236,13 @@ public class BasicAudioEventPlayer : MonoBehaviour
     }
 
     // Pour interaction
-    public void PlayInteractionSound()
+    public void PlayInteractionOnSound()
     {
-        audio.PlayOneShot(InteractionSounds[0]);
+        audio.PlayOneShot(InteractionONSounds[0]);
+    }
+    public void PlayInteractionOffSound()
+    {
+        audio.PlayOneShot(InteractionONSounds[0]);
     }
 
     //Ambiance

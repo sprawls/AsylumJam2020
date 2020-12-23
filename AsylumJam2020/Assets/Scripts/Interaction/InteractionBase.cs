@@ -9,10 +9,10 @@ public class InteractionBase : Powerable
 {
     public event Action<bool> OnInteractionTriggered;
 
-    [HideInInspector] public UnityEvent HighlightedStartEvent;
-    [HideInInspector] public UnityEvent HighlightedStopEvent;
-    [HideInInspector] public UnityEvent InteractionOkEvent;
-    [HideInInspector] public UnityEvent InteractionFailEvent;
+    [HideInInspector] public UnityEvent Event_Highlighted_Start;
+    [HideInInspector] public UnityEvent Event_Highlighted_Stop;
+    [HideInInspector] public UnityEvent Event_Interaction_On;
+    [HideInInspector] public UnityEvent Event_Interaction_Off;
 
     public enum InteractionState {
         NotHighlighted = 0,
@@ -60,7 +60,7 @@ public class InteractionBase : Powerable
         if (Animator != null) {
             Animator.SetBool(ANIM_PARAM_HIGHLIGHT_HASH, true);
 
-            HighlightedStartEvent.Invoke();
+            Event_Highlighted_Start.Invoke();
         }
     }
 
@@ -70,7 +70,7 @@ public class InteractionBase : Powerable
         if (Animator != null) {
             Animator.SetBool(ANIM_PARAM_HIGHLIGHT_HASH, false);
 
-            HighlightedStopEvent.Invoke();
+            Event_Highlighted_Stop.Invoke();
         }
     }
 
@@ -81,7 +81,7 @@ public class InteractionBase : Powerable
             }
 
             //Play Success SFX here
-            InteractionOkEvent.Invoke();
+            Event_Interaction_On.Invoke();
 
             if(OnInteractionTriggered != null) OnInteractionTriggered.Invoke(true);
         } else {
@@ -90,7 +90,7 @@ public class InteractionBase : Powerable
             }
 
             //Play Fail SFX here
-            InteractionFailEvent.Invoke();
+            Event_Interaction_Off.Invoke();
 
             if (OnInteractionTriggered != null) OnInteractionTriggered.Invoke(false);
         }

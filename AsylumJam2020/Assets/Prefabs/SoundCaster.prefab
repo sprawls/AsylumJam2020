@@ -60,8 +60,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 44d10b5159dcae643bdcd72e7c62e2f9, type: 3}
   HoverOffSounds:
   - {fileID: 8300000, guid: 9a189ed1e28acb24b90090a7f4bc5b52, type: 3}
-  InteractionSounds:
-  - {fileID: 8300000, guid: 4ae491b4a7bdf714cb2b9a8360d60b52, type: 3}
+  InteractionONSounds: []
+  InteractionOffSounds: []
   PlayAudio:
     m_PersistentCalls:
       m_Calls: []
@@ -98,16 +98,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PlayInteractionEvent:
+  PlayInteractionOnEvent:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6063777084947027867}
-        m_TargetAssemblyTypeName: BasicAudioEventPlayer, Assembly-CSharp
-        m_MethodName: PlayInteractionSound
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  PlayInteractionOffEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6063777084947027867}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
