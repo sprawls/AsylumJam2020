@@ -37,9 +37,9 @@ public class StateInteraction : InteractionBase
     }
 
     public override void Callback_OnInteracted() {
-        base.Callback_OnInteracted();
-
         if (Powered) {
+            base.Callback_OnInteracted();
+
             _stateActive = !_stateActive;
 
             UpdateAnimatorState();
