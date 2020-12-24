@@ -67,6 +67,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 67cc72faf7c1b3a4fa55141c60965488, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _WorldPattern:
+        m_Texture: {fileID: 2800000, guid: 02c30e87c64fdea4586b6db6695872f8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -93,8 +97,8 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FarSphereIntensity: 0.166
-    - _FarSphereMaskMax: 0.111
+    - _FarSphereIntensity: 0.028
+    - _FarSphereMaskMax: 0.42
     - _FarSphereMaskMin: 1
     - _FarSphereMaskSize: 0.71
     - _FarSphereSize: 10.9
@@ -112,18 +116,20 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SphereIntensity: 0.216
-    - _SphereMaskMax: 0.72
+    - _SphereMaskMax: 0.87
     - _SphereMaskMin: 1
-    - _SphereMaskSize: 2.46
+    - _SphereMaskSize: 2.78
     - _SphereSize: 35.1
     - _SrcBlend: 1
     - _StepMax: 0.99
     - _StepMin: 1
     - _Surface: 0
+    - _Test1: 0.363
+    - _Test2: 0.383
     - _TestFloat: 0.64
     - _WorkflowMode: 1
-    - _WorldGradientHeight: 0.124
-    - _WorldGradientintensity: 0.02
+    - _WorldGradientHeight: 0.181
+    - _WorldGradientintensity: 0.029
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
