@@ -649,6 +649,10 @@ PrefabInstance:
       value: 247
       objectReference: {fileID: 0}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: Volume
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: useStamina
       value: 0
       objectReference: {fileID: 0}
@@ -664,6 +668,78 @@ PrefabInstance:
       propertyPath: advanced.maxSlopeAngle
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.materialMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteMat.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteMat.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d041f2fdf5c00854bb626b58d0da9181, type: 2}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcretePhysMat.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c99e56dc06ffc7d44946a48b2f5c22c3, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 31d2e373f6b2fbf4c9408aade8b3b601, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 82b8b2c89261f5c4ea33230769332367, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e0db3b8aa571894c930ddd223ccd3ae, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 90ca7b7f322e65842ad30c3dd624e724, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 21210d622e467da47825289c0509c51e, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b5ca3dc9311423449713013e7c32c1c, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: e26dbffdb652dd045bbddc43d61c5d94, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: bf34825f124c0d34485e2bd26ef1ee83, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 95c01668be44fb44f8c6cbce694c39f5, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: a26e105b96dbc274b90ae1c5ed23eb72, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: fb53e2c209d7cd043b7293924b1a7ef6, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.rockAndConcreteClipSet.Array.data[12]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4e3e18566b402df449b51e2071f560f2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
 --- !u!4 &5881133000518954579 stripped
