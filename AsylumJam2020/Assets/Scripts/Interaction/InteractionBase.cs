@@ -30,7 +30,7 @@ public class InteractionBase : Powerable
 
     #region ACCESSORS
 
-    public InteractionState CurrentState { 
+    public InteractionState InteState { 
         get => _currentState;
         private set { 
             _currentState = value;
@@ -55,7 +55,7 @@ public class InteractionBase : Powerable
     #region CALLBACK
 
     public virtual void Callback_OnHighlightedStart() {
-        CurrentState = InteractionState.Highlighted;
+        InteState = InteractionState.Highlighted;
 
         if (Animator != null) {
             Animator.SetBool(ANIM_PARAM_HIGHLIGHT_HASH, true);
@@ -65,7 +65,7 @@ public class InteractionBase : Powerable
     }
 
     public virtual void Callback_OnHighlightedStop() {
-        CurrentState = InteractionState.NotHighlighted;
+        InteState = InteractionState.NotHighlighted;
 
         if (Animator != null) {
             Animator.SetBool(ANIM_PARAM_HIGHLIGHT_HASH, false);
