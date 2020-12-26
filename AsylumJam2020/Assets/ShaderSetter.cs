@@ -20,7 +20,7 @@ public class ShaderSetter : MonoBehaviour
         if(_shader != null) {
             Vector4 newValue = new Vector4(_head.position.x, _head.position.y, _head.position.z, _feet.position.y);
             Shader.SetGlobalVector(SH_VAR_POSITION_ID, newValue);
-            Debug.Log("Set " + newValue + " in shader property : " + SH_VAR_POSITION_STRING);
+            //Debug.Log("Set " + newValue + " in shader property : " + SH_VAR_POSITION_STRING);
         }
     }
 }

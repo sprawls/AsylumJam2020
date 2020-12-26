@@ -25,6 +25,7 @@ public class StateInteraction : InteractionBase
     private void UpdateAnimatorState() {
         if (Animator != null) {
             Animator.SetBool(ANIM_PARAM_STATE_HASH, _stateActive);
+            Animator.SetBool("IsOpenFront", _stateActive);
         }
     }
 
