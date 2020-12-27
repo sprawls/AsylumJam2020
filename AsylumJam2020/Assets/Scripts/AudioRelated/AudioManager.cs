@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 
 public class AudioManager : MonoBehaviour
 {
     private const float MuteValue = -80.00f;
+
+    public bool InGameSoundsSetting;
 
     [Header("Ambiance")]
     public AudioMixerGroup AmbianceMixer;
@@ -21,16 +24,56 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup MusicMixer;
     public float MusicVolume;
     public bool MusicMute;
+    [Space(5)]
     public AudioMixerGroup[] MusicTracks;
 
-    void Start()
+    [Header("Additional Controls")]
+    public bool ResetVolumeLvl;
+
+    [Space(5)]
+    public float FadeSpeedMultiplier;
+
+    [Space(5)]
+    public bool FadeInTest;
+    public bool FadeOutTest;
+    bool fadeComplete;
+
+    public UnityEvent Event_FadeInGameSound;
+    public UnityEvent Event_FadeOutGameSound;
+    public UnityEvent Event_ResetVolumeLvl;
+
+    private void Awake()
     {
         SetMixerVolumeParam();
+        FadeSpeedMultiplier = 10f;
     }
 
     void Update()
     {
-        SetMixerVolumeParam();
+        if (InGameSoundsSetting)
+        {
+            SetMixerVolumeParam();
+        }
+        else
+        {
+            if (FadeInTest)
+            {
+                FadeInTest = false;
+                Event_FadeInGameSound.Invoke();
+            }
+
+            if (FadeOutTest)
+            {
+                FadeOutTest = false;
+                Event_FadeOutGameSound.Invoke();
+            }
+        }
+
+        if (ResetVolumeLvl)
+        {
+            Event_ResetVolumeLvl.Invoke();
+            ResetVolumeLvl = false;
+        }
     }
 
     public void SetMixerVolumeParam()
@@ -64,5 +107,85 @@ public class AudioManager : MonoBehaviour
         {
             MusicMixer.audioMixer.SetFloat("MusicVolumeParam", MusicVolume);
         }      
+    }
+
+    public void ResetMixersVolume()
+    {
+        AmbianceMixer.audioMixer.SetFloat("AmbiantVolumeParam", 0f);
+        AmbianceVolume = 0f;
+
+        SFXMixer.audioMixer.SetFloat("SFXVolumeParam", 0f);
+        SFXVolume = 0f;
+
+        MusicMixer.audioMixer.SetFloat("MusicVolumeParam", 0f);
+        MusicVolume = 0f;
+    }
+
+    public void FadeInGameSound()
+    {
+        StartCoroutine(FadeIn(AmbianceMixer.audioMixer, "AmbiantVolumeParam", FadeSpeedMultiplier));
+        StartCoroutine(FadeIn(SFXMixer.audioMixer, "SFXVolumeParam", FadeSpeedMultiplier));
+        StartCoroutine(FadeIn(MusicMixer.audioMixer, "MusicVolumeParam", FadeSpeedMultiplier));
+
+        Debug.Log("fadeIn");
+    }
+    public void FadeOutGameSound()
+    {
+        StartCoroutine(FadeOut(AmbianceMixer.audioMixer, "AmbiantVolumeParam", FadeSpeedMultiplier));
+        StartCoroutine(FadeOut(SFXMixer.audioMixer, "SFXVolumeParam", FadeSpeedMultiplier));
+        StartCoroutine(FadeOut(MusicMixer.audioMixer, "MusicVolumeParam", FadeSpeedMultiplier));
+        Debug.Log("fadeout");
+    }
+  
+    IEnumerator FadeOut(AudioMixer audioGroup, string paramName, float FadeTime)
+    {
+        fadeComplete = false;
+        float actualVolume;
+        float volumeTofade;
+
+        audioGroup.GetFloat(paramName, out actualVolume);
+        volumeTofade = actualVolume;
+
+        while (volumeTofade > MuteValue)
+        {
+            audioGroup.SetFloat(paramName, volumeTofade -= (FadeTime * Time.deltaTime));
+
+            yield return null;
+        }
+
+        audioGroup.SetFloat(paramName, MuteValue);
+
+        if (volumeTofade != 0.0f)
+        {
+            audioGroup.SetFloat(paramName, MuteValue);
+        }
+        fadeComplete = true;
+    }
+
+    IEnumerator FadeIn(AudioMixer audioGroup, string paramName, float FadeTime)
+    {
+        fadeComplete = false;
+        float actualVolume;
+        float volumeTofade;
+
+        audioGroup.SetFloat(paramName, MuteValue);
+
+        audioGroup.GetFloat(paramName, out actualVolume);
+        volumeTofade = actualVolume;
+
+        while (volumeTofade < 0.0f)
+        {
+            audioGroup.SetFloat(paramName, volumeTofade += (FadeTime * Time.deltaTime));
+
+            yield return null;
+        }
+
+        audioGroup.SetFloat(paramName, 0.0f);
+
+        if (volumeTofade != 0.0f)
+        {
+            audioGroup.SetFloat(paramName, 0.0f);
+        }
+        fadeComplete = true;
     }
 }

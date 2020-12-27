@@ -45,13 +45,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AmbianceMixer: {fileID: -5985388206131719539, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   AmbianceVolume: 0
+  AmbianceMute: 0
   SFXMixer: {fileID: -2871390159717383345, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   SFXVolume: 0
+  SFXMute: 0
   MusicMixer: {fileID: 7950623741608692425, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   MusicVolume: 0
+  MusicMute: 0
   MusicTracks:
   - {fileID: -2350697081472483010, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   - {fileID: 1164392267814344291, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   - {fileID: 8391752460108947655, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   - {fileID: 776247163845820108, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   - {fileID: -5148750996232634702, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
+  ResetVolumeLvl: 0
+  InGameSoundsSetting: 0
+  FadeSpeedMultiplier: 0
+  FadeInTest: 0
+  FadeOutTest: 0
+  Event_FadeInGameSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3528703468371967332}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: FadeInGameSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Event_FadeOutGameSound:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3528703468371967332}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: FadeOutGameSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Event_ResetVolumeLvl:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3528703468371967332}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: ResetMixersVolume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
