@@ -1076,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d041f2fdf5c00854bb626b58d0da9181, type: 2}
     - target: {fileID: 2178921600198075514, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_Name
-      value: Inifnite Staircase_Floor3
+      value: Infinite Staircase_Floor3
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075514, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_IsActive
@@ -1088,15 +1088,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.084999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.754
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.919998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_LocalRotation.w

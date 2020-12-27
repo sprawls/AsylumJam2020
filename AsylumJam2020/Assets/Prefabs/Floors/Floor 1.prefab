@@ -220,6 +220,7 @@ Transform:
   - {fileID: 2939119017067538050}
   - {fileID: 5559880871368951018}
   - {fileID: 3555848326753933063}
+  - {fileID: 8648166844593112729}
   m_Father: {fileID: 6148672728393360999}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1414,11 +1415,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8277db6c985e0a4aa7755adf625b340, type: 3}
---- !u!4 &8229601247771075566 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2837571227154120318, guid: b8277db6c985e0a4aa7755adf625b340, type: 3}
-  m_PrefabInstance: {fileID: 6148672727250263440}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3191828088870044374 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8727940863119122246, guid: b8277db6c985e0a4aa7755adf625b340, type: 3}
@@ -1430,6 +1426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3613231da475f7a4f9a8cfcc855767a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8229601247771075566 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2837571227154120318, guid: b8277db6c985e0a4aa7755adf625b340, type: 3}
+  m_PrefabInstance: {fileID: 6148672727250263440}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6148672727454423473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2035,7 +2036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9051567195983202756, guid: 2d4b1d3599cd8d74bb04b78a2c493a11, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9051567195983202763, guid: 2d4b1d3599cd8d74bb04b78a2c493a11, type: 3}
       propertyPath: m_RootOrder
@@ -2680,7 +2681,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d041f2fdf5c00854bb626b58d0da9181, type: 2}
     - target: {fileID: 2178921600198075514, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_Name
-      value: Inifnite Staircase_Floor1
+      value: Infinite Staircase_Floor1
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075514, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_IsActive
@@ -2692,15 +2693,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.084999
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.754
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.919998
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3504,4 +3505,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2178921600198075515, guid: 889f3e3dbd093f94790832abaeff9f6b, type: 3}
   m_PrefabInstance: {fileID: 6148672728464619353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8520393387158922156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6148672726682961242}
+    m_Modifications:
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.968003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025397158305162554, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+      propertyPath: m_Name
+      value: Staircase Top
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+--- !u!4 &8648166844593112729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1025397158305162549, guid: 0d7a6e81d578fe945a2049c2fdb40043, type: 3}
+  m_PrefabInstance: {fileID: 8520393387158922156}
   m_PrefabAsset: {fileID: 0}
