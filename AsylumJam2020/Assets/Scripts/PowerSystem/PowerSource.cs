@@ -30,6 +30,10 @@ public class PowerSource : Powerable
         UpdatePower();
     }
 
+    protected override void Awake() {
+        base.Awake();
+    }
+
     protected override void Start() {
         base.Start();
 
