@@ -606,9 +606,9 @@ Shader "TftS/Windows_00"
 }
 /*ASEBEGIN
 Version=18800
-1929;17;1894;986;2283.7;920.5556;2.026193;True;True
+1929;17;1894;986;2283.7;914.4771;2.026193;True;True
 Node;AmplifyShaderEditor.CommentaryNode;23;-1439.659,3.185785;Inherit;False;1167.19;654.803;;11;15;14;10;11;13;12;7;9;17;8;6;Proximity Mask;1,1,1,1;0;0
-Node;AmplifyShaderEditor.Vector4Node;6;-1389.659,53.18578;Inherit;False;Global;HeadandPlayerPosition;Head and Player Position;0;0;Create;True;0;0;0;False;0;False;0,0,0,0;59.46,3.141,47.58,1.168;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.Vector4Node;6;-1389.659,53.18578;Inherit;False;Global;HeadandPlayerPosition;Head and Player Position;0;0;Create;True;0;0;0;False;0;False;0,0,0,0;64.566,2.491,50,1.018;0;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.WorldPosInputsNode;8;-1156.837,225.1105;Inherit;False;0;4;FLOAT3;0;FLOAT;1;FLOAT;2;FLOAT;3
 Node;AmplifyShaderEditor.DynamicAppendNode;17;-1109.678,105.711;Inherit;False;FLOAT3;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT3;0
 Node;AmplifyShaderEditor.RangedFloatNode;9;-1211.309,388.4338;Inherit;False;Property;_SphereMaskSize;Sphere Mask Size;0;0;Create;True;0;0;0;False;0;False;0;1.93;0;10;0;1;FLOAT;0
@@ -640,4 +640,4 @@ WireConnection;15;0;14;0
 WireConnection;1;2;5;0
 WireConnection;1;3;15;0
 ASEEND*/
-//CHKSM=ABEF7C7D6F4FC9051497C84F6D971669E3E43C69
+//CHKSM=E77799D2A1B83D657B8E2AC39C1C596A555A6930

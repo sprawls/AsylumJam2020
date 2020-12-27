@@ -208,7 +208,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4748282922669961770
 Transform:
   m_ObjectHideFlags: 0
@@ -654,12 +654,12 @@ GameObject:
   - component: {fileID: 3123979399522820328}
   - component: {fileID: 8718989036752839125}
   m_Layer: 0
-  m_Name: Roof
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2204424963507968056
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f5c9116bbb4f144caf282b5ae92da62
+guid: 133778eea4a95424aa6654ed57d7ae01
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -9,14 +9,9 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: MSOURCE_Surfaces_00
     second: {fileID: 2100000, guid: d041f2fdf5c00854bb626b58d0da9181, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: MSOURCE_Windows_00
-    second: {fileID: 2100000, guid: 55981c47aa6e1e64bbba38f51f9b0a26, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 1
+    materialName: 0
     materialSearch: 1
     materialLocation: 1
   animations:
