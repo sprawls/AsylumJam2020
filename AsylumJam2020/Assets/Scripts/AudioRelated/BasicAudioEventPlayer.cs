@@ -10,7 +10,11 @@ public class BasicAudioEventPlayer : MonoBehaviour
 {
     [SerializeField]new AudioSource audio;
 
-    [SerializeField] InteractionBase SoundInteractionSource;
+    [SerializeField] InteractionBase soundInteractionSource;
+    [SerializeField] PowerInteraction powerInteractionSource;
+    public bool PowerInteractionType;
+    [SerializeField] StateInteraction stateInteractionSource;
+    public bool StateInteractionType;
 
     bool canSearchInteraction;
     bool listenersOn;
@@ -45,8 +49,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public UnityEvent PlayInteractionOffEvent;
 
     delegate void SoundsMethod();
-
-    public bool Test;
+    List<SoundsMethod> soundMethod = new List<SoundsMethod>();
 
     void Awake()
     {
@@ -78,7 +81,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
         
         if (InteractionType || MixedType)
         {
-            if (SoundInteractionSource != null && !listenersOn)//(interactionRaycaster.CurrentInteraction != null && !listenersOn)
+            if (soundInteractionSource != null && !listenersOn)//(interactionRaycaster.CurrentInteraction != null && !listenersOn)
             {
                 Invoke("AddInteractionsListeners", 0f);
             }
@@ -88,11 +91,11 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public void AddInteractionsListeners()
     {
         listenersOn = true;
-        if (SoundInteractionSource != null)
+        if (soundInteractionSource != null)
         {
-            SoundInteractionSource.Event_Highlighted_Start.AddListener(PlayHoverSound);
-            SoundInteractionSource.Event_Highlighted_Stop.AddListener(PlayHoverOffSound);
-            SoundInteractionSource.Event_Interaction_On.AddListener(PlayInteractionOnSound);
+            soundInteractionSource.Event_Highlighted_Start.AddListener(PlayHoverSound);
+            soundInteractionSource.Event_Highlighted_Stop.AddListener(PlayHoverOffSound);
+            soundInteractionSource.Event_Interaction_On.AddListener(PlaySelectedInteractionSound);
 
             Debug.Log("listeners Added");
         }
@@ -100,11 +103,11 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public void RemoveInteractionsListeners()
     {
         listenersOn = false;
-        if (SoundInteractionSource != null)
+        if (soundInteractionSource != null)
         {
-            SoundInteractionSource.Event_Highlighted_Start.RemoveListener(PlayHoverSound);
-            SoundInteractionSource.Event_Highlighted_Stop.RemoveListener(PlayHoverOffSound);
-            SoundInteractionSource.Event_Interaction_On.RemoveListener(PlayInteractionOnSound);
+            soundInteractionSource.Event_Highlighted_Start.RemoveListener(PlayHoverSound);
+            soundInteractionSource.Event_Highlighted_Stop.RemoveListener(PlayHoverOffSound);
+            soundInteractionSource.Event_Interaction_On.RemoveListener(PlaySelectedInteractionSound);
 
             Debug.Log("listeners Removed");
         }
@@ -139,6 +142,20 @@ public class BasicAudioEventPlayer : MonoBehaviour
         audio.Pause();
     }
 
+    public void GetSpecificInteractionType()
+    {
+        if (soundInteractionSource.GetComponent<PowerInteraction>() != null)
+        {
+            powerInteractionSource = soundInteractionSource.GetComponent<PowerInteraction>();
+            PowerInteractionType = true;
+        }
+        if (soundInteractionSource.GetComponent<StateInteraction>() != null)
+        {
+            stateInteractionSource = soundInteractionSource.GetComponent<StateInteraction>();
+            StateInteractionType = true;
+        }
+    }
+
     public void ConfigureAudioSetUp()
     {
         CheckSoundBanks();
@@ -170,7 +187,14 @@ public class BasicAudioEventPlayer : MonoBehaviour
             PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
             audio.loop = false;
             audio.playOnAwake = false;
-            SoundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+            soundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+
+            if (soundInteractionSource.GetComponent<PowerInteraction>() != null)
+            {
+                powerInteractionSource = soundInteractionSource.GetComponent<PowerInteraction>();
+            }
+
+            GetSpecificInteractionType();
         }
         else if (AmbiantSound != null && MixedType)
         {
@@ -180,7 +204,9 @@ public class BasicAudioEventPlayer : MonoBehaviour
             PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
 
             AmbiantAudioInit();
-            SoundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+            soundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+
+            GetSpecificInteractionType();
         }
         else
         {
@@ -218,9 +244,9 @@ public class BasicAudioEventPlayer : MonoBehaviour
 
     void CreateList()
     {
-        List<SoundsMethod> soundMethod = new List<SoundsMethod>();
         soundMethod.Add(PlayHoverSound);
         soundMethod.Add(PlayHoverOffSound);
+        soundMethod.Add(PlayInteractionOffSound);
         soundMethod.Add(PlayInteractionOnSound);
     }
 
@@ -243,20 +269,48 @@ public class BasicAudioEventPlayer : MonoBehaviour
     }
 
     // Pour interaction
+    public void PlayInteractionOffSound()
+    {
+        Debug.Log("Interaction OFF");
+        if (InteractionOffSounds.Length != 0)
+        {
+            int randNumb = UnityEngine.Random.Range(0, InteractionOffSounds.Length);
+            audio.PlayOneShot(InteractionOffSounds[randNumb]);
+        }
+    }
     public void PlayInteractionOnSound()
     {
+        Debug.Log("Interaction ON");
         if (InteractionONSounds.Length != 0)
         {
             int randNumb = UnityEngine.Random.Range(0, InteractionONSounds.Length);
             audio.PlayOneShot(InteractionONSounds[randNumb]);
         }
     }
-    public void PlayInteractionOffSound()
+
+    public void PlaySelectedInteractionSound()
     {
-        if (InteractionOffSounds.Length != 0)
+        if (PowerInteractionType)
         {
-            int randNumb = UnityEngine.Random.Range(0, InteractionOffSounds.Length);
-            audio.PlayOneShot(InteractionONSounds[randNumb]);
+            if (powerInteractionSource._isActive)
+            {
+                soundMethod[2]();
+            }
+            else
+            {
+                soundMethod[3]();
+            }
+        }
+        if (StateInteractionType)
+        {
+            if (stateInteractionSource._stateActive)
+            {
+                soundMethod[2]();
+            }
+            else
+            {
+                soundMethod[3]();
+            }
         }
     }
 

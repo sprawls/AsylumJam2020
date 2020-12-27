@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class StateInteraction : InteractionBase
 {
-    [SerializeField] private bool _stateActive = false;
+    [SerializeField] internal bool _stateActive = false;
 
-    [SerializeField] private bool _powerBased = false;
+    [SerializeField] internal bool _powerBased = false;
 
     private static string ANIM_PARAM_STATE = "StateActive";
     private static int ANIM_PARAM_STATE_HASH = -1;

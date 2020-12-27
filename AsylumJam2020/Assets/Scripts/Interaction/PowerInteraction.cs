@@ -7,7 +7,7 @@ public class PowerInteraction : InteractionBase {
     [SerializeField] private List<PowerSource> _linkedPowerSources = default;
     [SerializeField] private Renderer _cableVisionRenderer = default;
 
-    [SerializeField] private bool _isActive = false;
+    [SerializeField] internal bool _isActive = false;
 
     #region ACCESSORS
 
