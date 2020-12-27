@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2764714541654008285
+--- !u!1001 &4128091642083726129
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027866, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: m_Name
-      value: Breaker SoundCaster Variant
+      value: Door SoundCaster Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: AmbiantSound
@@ -73,36 +73,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionOffSounds.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 5a17ca8989e8ab645a669093cc8a1faa, type: 3}
+      objectReference: {fileID: 8300000, guid: 4ecb875f240e45747835796b0461ed43, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: b74353772be54e349968d97e7592e13b, type: 3}
+      objectReference: {fileID: 8300000, guid: 3f6d1f4354e5a8049b086ca2ee485f06, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 70d739e0e0274b3409326569834eb2d9, type: 3}
+      objectReference: {fileID: 8300000, guid: 9db3ab278813a864195527c51bb59893, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 81d13b6e542900d4eb09846f42f7e5ac, type: 3}
+      objectReference: {fileID: 8300000, guid: 9db3ab278813a864195527c51bb59893, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionOffSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 84d1b1edf9ffe6a40a08efed8b5f5d58, type: 3}
+      objectReference: {fileID: 8300000, guid: 18e188be61a38c64a806b4646bec6689, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
-      propertyPath: InteractionOffSounds.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 34bd49ff53a13c04aa5fe8fb9152e3c5, type: 3}
+      propertyPath: PlayHoverEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
-      propertyPath: InteractionOffSounds.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 75024ee0df3dbcc419afd3106336aa95, type: 3}
+      propertyPath: PlayHoverOffEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: PlayInteractionOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayInteractionOnSound
