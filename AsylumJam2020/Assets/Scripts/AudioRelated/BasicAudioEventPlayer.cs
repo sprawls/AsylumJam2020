@@ -39,6 +39,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public AudioClip[] HoverOffSounds;
     public AudioClip[] InteractionONSounds;
     public AudioClip[] InteractionOffSounds;
+    public AudioClip[] InteractionFailSounds;
 
     [Space(20)]
     public UnityEvent PlayAudio;
@@ -96,6 +97,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
             soundInteractionSource.Event_Highlighted_Start.AddListener(PlayHoverSound);
             soundInteractionSource.Event_Highlighted_Stop.AddListener(PlayHoverOffSound);
             soundInteractionSource.Event_Interaction_On.AddListener(PlaySelectedInteractionSound);
+            soundInteractionSource.Event_Interaction_Off.RemoveListener(PlaySelectedInteractionSound);
 
             Debug.Log("listeners Added");
         }
@@ -108,6 +110,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
             soundInteractionSource.Event_Highlighted_Start.RemoveListener(PlayHoverSound);
             soundInteractionSource.Event_Highlighted_Stop.RemoveListener(PlayHoverOffSound);
             soundInteractionSource.Event_Interaction_On.RemoveListener(PlaySelectedInteractionSound);
+            soundInteractionSource.Event_Interaction_Off.RemoveListener(PlaySelectedInteractionSound);
 
             Debug.Log("listeners Removed");
         }
@@ -115,7 +118,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
 
     public void CheckSoundBanks()
     {
-        if (HoverSounds != null || HoverOffSounds != null || InteractionONSounds != null)
+        if (HoverSounds != null || HoverOffSounds != null || InteractionONSounds != null || InteractionOffSounds != null || InteractionFailSounds != null)
         {
             PonctualSoundsEnabled = true;
         }
@@ -248,6 +251,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
         soundMethod.Add(PlayHoverOffSound);
         soundMethod.Add(PlayInteractionOffSound);
         soundMethod.Add(PlayInteractionOnSound);
+        soundMethod.Add(PlayInteractionFailedSound);
     }
 
     // Highlight d'un objet
@@ -287,6 +291,15 @@ public class BasicAudioEventPlayer : MonoBehaviour
             audio.PlayOneShot(InteractionONSounds[randNumb]);
         }
     }
+    public void PlayInteractionFailedSound()
+    {
+        Debug.Log("Interaction Failed");
+        if (InteractionFailSounds.Length != 0)
+        {
+            int randNumb = UnityEngine.Random.Range(0, InteractionFailSounds.Length);
+            audio.PlayOneShot(InteractionFailSounds[randNumb]);
+        }
+    }
 
     public void PlaySelectedInteractionSound()
     {
@@ -307,9 +320,13 @@ public class BasicAudioEventPlayer : MonoBehaviour
             {
                 soundMethod[2]();
             }
-            else
+            if (!stateInteractionSource._stateActive)
             {
                 soundMethod[3]();
+            }
+            if(!stateInteractionSource._powerBased)
+            {
+                soundMethod[4]();
             }
         }
     }

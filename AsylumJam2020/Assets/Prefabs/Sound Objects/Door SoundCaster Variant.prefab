@@ -76,6 +76,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionFailSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 4ecb875f240e45747835796b0461ed43, type: 3}
@@ -100,6 +104,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 1bd8b5ab28b9c274d8a1944afabcf888, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: InteractionFailSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 18e188be61a38c64a806b4646bec6689, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: PlayHoverEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -108,12 +116,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayInteractionOnEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: PlayInteractionOffEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: PlayInteractionOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayInteractionOnSound
       objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: PlayInteractionOffEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayInteractionOffSound
+      value: PlaySelectedInteractionSound
       objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: PlayInteractionOnEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
