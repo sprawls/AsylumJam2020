@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8407381488450539516
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_text
+      value: "The top floor.\n\nWhen I first got here, I could see the station's
+        broadcasting equipment blinking through the windows on the top floor. That
+        means everything up there still has power.\n\nIf I can make my way up there,
+        I can use that junk to fire off an SOS. Get help. Ask someone to break me
+        out. Anything. There's no guarantee it'll work, but it's probably the only
+        chance I have left.\n\nHell, if anyone is reading this right now, it's because
+        my plan worked. You heard me cry for help, and you came.\n\nAnd if you've
+        ended up trapped in here too... Sorry. \n\nBut at least now you know there's
+        a way for you to get help. \n\nJust keep climbing."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669291339830271636, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_Name
+      value: NOTE 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}

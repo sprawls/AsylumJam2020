@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1473776185461971474
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_text
+      value: "I'm starting to go insane.\n\nIt doesn't matter how many fucking times
+        I try to go back down to the ground floor. And it doesn't matter how many
+        flights I climb either. Every floor is THIS floor. \n\nI think flipping the
+        breakers did this. But I don't think flipping them again will fix things.
+        If I turn the power back on, I still won't find an exit. \n\nI'll just keep
+        finding more. More wires. More breakers. More places to get lost. More reasons
+        to go lose my mind.\n\n...I'm going to die. I'm going to fucking die here,
+        and I'll never see my wife or kid again.\n\nBecause there's no way out."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5669291339830271636, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_Name
+      value: NOTE 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
