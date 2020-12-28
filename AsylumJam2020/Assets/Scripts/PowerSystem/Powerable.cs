@@ -67,6 +67,10 @@ public class Powerable : MonoBehaviour
         _isStarted = true;
     }
 
+    protected virtual void Update() {
+
+    }
+
     private void OnEnable() {
         if(_isStarted) {
             CheckPowered();

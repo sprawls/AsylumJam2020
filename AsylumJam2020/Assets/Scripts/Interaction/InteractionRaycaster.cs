@@ -23,7 +23,7 @@ public class InteractionRaycaster : MonoBehaviour
                     _currentInteraction.Callback_OnHighlightedStop();
                 }
 
-                Debug.Log(string.Format("Current Interaction changed from {0} to {1}", _currentInteraction, value));
+                //Debug.Log(string.Format("Current Interaction changed from {0} to {1}", _currentInteraction, value));
                 _currentInteraction = value;
 
                 if (_currentInteraction != null) {
