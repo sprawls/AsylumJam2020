@@ -82,11 +82,11 @@ PrefabInstance:
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 4ecb875f240e45747835796b0461ed43, type: 3}
+      objectReference: {fileID: 8300000, guid: 3f6d1f4354e5a8049b086ca2ee485f06, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 3f6d1f4354e5a8049b086ca2ee485f06, type: 3}
+      objectReference: {fileID: 8300000, guid: 4ecb875f240e45747835796b0461ed43, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[2]
       value: 
@@ -98,11 +98,11 @@ PrefabInstance:
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionOffSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 9db3ab278813a864195527c51bb59893, type: 3}
+      objectReference: {fileID: 8300000, guid: 95ab47f8364de1748a715076c988ffba, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionOffSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: 1bd8b5ab28b9c274d8a1944afabcf888, type: 3}
+      objectReference: {fileID: 8300000, guid: 005ec17c705a80144bd5e51fec4f1c9d, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionFailSounds.Array.data[0]
       value: 
