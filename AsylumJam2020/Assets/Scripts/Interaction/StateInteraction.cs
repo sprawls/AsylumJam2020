@@ -47,7 +47,10 @@ public class StateInteraction : InteractionBase
 
             UpdateAnimatorState();
         }
-
+        if (!Powered && !_powerBased)
+        {
+            Event_Interaction_Failed.Invoke();
+        }
     }
 
     public override void OnPoweredOn() {

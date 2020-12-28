@@ -97,7 +97,8 @@ public class BasicAudioEventPlayer : MonoBehaviour
             soundInteractionSource.Event_Highlighted_Start.AddListener(PlayHoverSound);
             soundInteractionSource.Event_Highlighted_Stop.AddListener(PlayHoverOffSound);
             soundInteractionSource.Event_Interaction_On.AddListener(PlaySelectedInteractionSound);
-            soundInteractionSource.Event_Interaction_Off.RemoveListener(PlaySelectedInteractionSound);
+            soundInteractionSource.Event_Interaction_Off.AddListener(PlaySelectedInteractionSound);
+            soundInteractionSource.Event_Interaction_Failed.AddListener(PlayInteractionFailedSound);
 
             Debug.Log("listeners Added");
         }
@@ -111,6 +112,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
             soundInteractionSource.Event_Highlighted_Stop.RemoveListener(PlayHoverOffSound);
             soundInteractionSource.Event_Interaction_On.RemoveListener(PlaySelectedInteractionSound);
             soundInteractionSource.Event_Interaction_Off.RemoveListener(PlaySelectedInteractionSound);
+            soundInteractionSource.Event_Interaction_Failed.RemoveListener(PlayInteractionFailedSound);
 
             Debug.Log("listeners Removed");
         }
@@ -324,7 +326,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
             {
                 soundMethod[3]();
             }
-            if(!stateInteractionSource._powerBased)
+            if(!stateInteractionSource._powerBased && !stateInteractionSource.Powered)
             {
                 soundMethod[4]();
             }

@@ -13,6 +13,7 @@ public class InteractionBase : Powerable
     [HideInInspector] public UnityEvent Event_Highlighted_Stop;
     [HideInInspector] public UnityEvent Event_Interaction_On;
     [HideInInspector] public UnityEvent Event_Interaction_Off;
+    [HideInInspector] public UnityEvent Event_Interaction_Failed;
 
     public enum InteractionState {
         NotHighlighted = 0,
@@ -94,7 +95,6 @@ public class InteractionBase : Powerable
 
             if (OnInteractionTriggered != null) OnInteractionTriggered.Invoke(false);
         }
-
     }
 
     #endregion
