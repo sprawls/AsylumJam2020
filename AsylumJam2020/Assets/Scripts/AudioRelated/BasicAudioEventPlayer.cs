@@ -24,6 +24,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public bool ObjectAmbiantType;
     public bool InteractionType;
     public bool MixedType;
+    public bool OtherType;
 
     [Space(20)]
     public SphereCollider PlayerDetectionSphereCollider;
@@ -41,9 +42,13 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public AudioClip[] InteractionOffSounds;
     public AudioClip[] InteractionFailSounds;
 
+    [Space(5)]
+    public AudioClip[] OtherSounds;
+
     [Space(20)]
     public UnityEvent PlayAudio;
     public UnityEvent StopAudio;
+    public UnityEvent PlayRandomAudio;
     public UnityEvent PlayHoverEvent;
     public UnityEvent PlayHoverOffEvent;
     public UnityEvent PlayInteractionOnEvent;
@@ -80,7 +85,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     {
         if (!canSearchInteraction) return;
         
-        if (InteractionType || MixedType)
+        if (InteractionType || MixedType || OtherType)
         {
             if (soundInteractionSource != null && !listenersOn)//(interactionRaycaster.CurrentInteraction != null && !listenersOn)
             {
@@ -192,7 +197,11 @@ public class BasicAudioEventPlayer : MonoBehaviour
             PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
             audio.loop = false;
             audio.playOnAwake = false;
-            soundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+
+            if (this.transform.parent.GetComponent<InteractionBase>() != null)
+            {
+                soundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+            }
 
             if (soundInteractionSource.GetComponent<PowerInteraction>() != null)
             {
@@ -209,9 +218,22 @@ public class BasicAudioEventPlayer : MonoBehaviour
             PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
 
             AmbiantAudioInit();
-            soundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+
+            if (this.transform.parent.GetComponent<InteractionBase>() != null)
+            {
+                soundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+            }
 
             GetSpecificInteractionType();
+        }
+        else if (OtherType)
+        {
+            PlayerDetectionBoxCollider.enabled = false;
+            PlayerDetectionSphereCollider.enabled = true;
+
+            PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
+            audio.loop = false;
+            audio.playOnAwake = false;
         }
         else
         {
@@ -341,5 +363,12 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public void StopAmbiantSound()
     {
 
+    }
+
+    //RandomPlayer
+    public void PlayRandomSounds()
+    {
+        int randNumb = UnityEngine.Random.Range(0, OtherSounds.Length);
+        audio.PlayOneShot(OtherSounds[randNumb]);
     }
 }
