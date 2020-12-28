@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95fd784ec3edd8a4680599557c722fdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _shader: {fileID: 4800000, guid: 3edf0a640e3eb764a8c052eba2b8b24f, type: 3}
+  _shaders: []
   _feet: {fileID: 4942096985197796963}
   _head: {fileID: 5881133000518954579}
 --- !u!1 &4426927063508374389
@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _cableVisionAnimator: {fileID: 5387435638486948626}
+  _screenObject: {fileID: 228442978540459173}
 --- !u!114 &222448384998593660
 MonoBehaviour:
   m_ObjectHideFlags: 0
