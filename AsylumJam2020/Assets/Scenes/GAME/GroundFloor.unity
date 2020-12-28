@@ -178,6 +178,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Entity_TheFollower Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7729509755837803650, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: periodY
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729509755837803650, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: periodZ
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729509755837803650, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: amplitudeX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729509755837803650, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: amplitudeY
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7729509755837803650, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: amplitudeZ
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
 --- !u!43 &30192380

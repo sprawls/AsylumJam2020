@@ -24,7 +24,7 @@ public class EntityFollowingBehaviour : MonoBehaviour
     {
         basicAudioEventPlayer = GetComponent<BasicAudioEventPlayer>();
 ;       entityFollowingAudioSource = basicAudioEventPlayer.GetComponent<AudioSource>();
-        SourceOffset = new Vector3(0, -0.5f, -5f);
+        SourceOffset = new Vector3(0, -0.5f, -8f);
     }
 
     void Start()
