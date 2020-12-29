@@ -26,15 +26,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7985358693438207753}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -4, y: 2, z: 7.75}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5196489784559068628}
   - {fileID: 3155941223813244713}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7985358693438207749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -92,6 +92,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   Event_Interaction_Off:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_Interaction_Failed:
     m_PersistentCalls:
       m_Calls: []
   _stateActive: 0
