@@ -23,15 +23,18 @@ PrefabInstance:
 
 
         Batshit.
-        I know. But like I said, it''s the only thing that makes
+        I know. But like I said, it''s the only thing that makes sense. And if I''m
+        right, this means I have two more things to worry about.
 
 
+        One, is
+        what "time" my SOS will end up in, assuming I reach the top. If it triggers
+        at a time where, say, radios don''t exist anymore, I''m boned.
 
-        But if
-        I''m right, this means two things.
 
-
-        One, '
+        And
+        two is... Well... What the fuck is gonna happen to ME if I keep walking back
+        and forth through time like this?'
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder

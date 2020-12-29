@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1033517860361159878
+--- !u!1001 &988535743640766547
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -9,17 +9,40 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: "I don't feel \"trapped\" by this building anymore. \n\nIt feels like
-        I've been consumed by it.\n\nIt's in the way all the walls are hot and wet
-        to the touch instead of cold and dusy. It's in the way this floor feels less
-        like a maze and more like a tangled string of intestines. It's in the way
-        this place just seems to get bigger and bigger as I become more and more
-        decrepit.\n\nHell, I don't even think the mayday signal that brought me here
-        in the first place was real anymore. I just think it was a lure. Like the
-        kind angler fish use to bait smaller fish into getting too close for their
-        own fucking good.\n\nI was dumb enough to take the bait. Now I'm being digested
-        alive by concrete.\n\nAnd if I don't find a way to the top floor fast, Laura
-        won't ever see me again. Not even as a corpse."
+      value: 'Radio equipment''s so old, I could barely get a signal out. I don''t
+        think anyone''s gonna be picking up what I put out. And even if they do,
+        there''s no way in hell they''ll be getting me out of here .
+
+
+        Door''s
+        gone. Window''s unbreakable. And just writing this down is taking everything
+        I''ve got. I''ll be kicking the bucket any second now.
+
+
+        On the off
+        chance anyone finds this here, and somehow figures a way to leave... Please
+        find my family, and pass this message along to them.
+
+
+        To my girlfriend
+        Laura, I love you with all my heart. I''m sorry I couldn''t be there to see
+        our son''s birth, or to raise them with you.
+
+
+        To the son I''ve never
+        met... Daddy''s sorry he''ll never be able to tell you that face to face.
+        But I''m proud of you. And I believe in you.
+
+
+        ...Alright. I''m gonna
+        spend what last breaths I''ve got left singing my son happy birthday on the
+        radio, and hope old age kills me before I starve.
+
+
+        Yours truly,
+
+        Devon
+        Robinson'
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder
@@ -67,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669291339830271636, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_Name
-      value: NOTE 11
+      value: NOTE 13 (FINAL NOTE) Copy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
