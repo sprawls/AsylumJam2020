@@ -63,6 +63,8 @@ MonoBehaviour:
   - {fileID: 8391752460108947655, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   - {fileID: 776247163845820108, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   - {fileID: -5148750996232634702, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
+  SFXEntityFollowing: {fileID: 8738204775143994239, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
+  Entity: []
   ResetVolumeLvl: 0
   FadeSpeedMultiplier: 0
   FadeInTest: 0

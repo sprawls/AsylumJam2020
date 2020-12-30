@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Entity_TheFollower Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2136588112941789969, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: m_TagString
+      value: Entity
+      objectReference: {fileID: 0}
     - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
       propertyPath: Event_FadeIntSounds.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5801,6 +5805,10 @@ PrefabInstance:
     - target: {fileID: 1685752869252914936, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
       propertyPath: m_Name
       value: Entity_Upperhead
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685752869252914936, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
+      propertyPath: m_TagString
+      value: Entity
       objectReference: {fileID: 0}
     - target: {fileID: 1685752869252914937, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
       propertyPath: m_RootOrder

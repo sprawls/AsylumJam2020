@@ -33,6 +33,10 @@ public class AudioManager : MonoBehaviour
     [Space(5)]
     public AudioMixerGroup[] MusicTracks;
 
+    [Header("Entity Noise Controls")]
+    public AudioMixerGroup SFXEntityFollowing;
+    public GameObject[] Entity;
+    
     [Header("Additional Controls")]
     public bool ResetVolumeLvl;
 
@@ -52,10 +56,20 @@ public class AudioManager : MonoBehaviour
     {
         SetMixerVolumeParam();
         FadeSpeedMultiplier = 10f;
+
+        Entity = GameObject.FindGameObjectsWithTag("Entity");
+
+        if (Entity != null && Entity.Length != 0)
+        {
+            foreach (var spirit in Entity)
+            {
+                spirit.SetActive(false);
+            }
+        }
     }
     private void Start()
     {
-
+        SFXEntityFollowing.audioMixer.SetFloat("EntityFollowerVolume", MuteValue);
     }
 
     void Update()
@@ -63,6 +77,7 @@ public class AudioManager : MonoBehaviour
         LayerOfSound = FloorManager.CurrentFloor;
         IsInStairCase = FloorManager.IsInStaircase;
         SetReverbBusRoomLvl();
+        ToggleEntityByFloorLvl();
 
         if (InGameSoundsSetting)
         {
@@ -97,6 +112,31 @@ public class AudioManager : MonoBehaviour
         else
         {
             ReverbRoom = initialReverbroomValue;
+        }
+    }
+
+    public void ToggleEntityByFloorLvl()
+    {
+        switch (LayerOfSound)
+        {
+            case 0:
+                break;
+            case 1:
+                Entity[0].SetActive(true);
+                break;
+            case 2:
+                Entity[1].SetActive(true);
+                SFXEntityFollowing.audioMixer.SetFloat("EntityFollowerVolume", 0.0f);
+                break;
+            case 3:
+                Entity[2].SetActive(true);
+                break;
+            case 4:
+                Entity[3].SetActive(true);
+                break;
+
+            default:
+                break;
         }
     }
 
