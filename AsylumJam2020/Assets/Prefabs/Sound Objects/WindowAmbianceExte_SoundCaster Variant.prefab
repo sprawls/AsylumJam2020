@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6654091944143120700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: MaxDistance
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8933831902261794606, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 0.50781006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.18965924
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
+      value: -1.2411155
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inSlope
+      value: -0.43379524
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inWeight
+      value: 0.25238594
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
+      value: -0.9184737
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inWeight
+      value: 0.2894372
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outWeight
+      value: 0.18945476
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].tangentMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].tangentMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027866, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: m_Name
+      value: WindowAmbianceExte_SoundCaster Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: AmbiantSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bacd1f6a746c4a4d859f720786f4deb, type: 3}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: ObjectAmbiantType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: LoopIsNotInterupted
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}

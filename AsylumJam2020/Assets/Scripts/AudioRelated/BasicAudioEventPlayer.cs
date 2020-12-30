@@ -10,6 +10,8 @@ public class BasicAudioEventPlayer : MonoBehaviour
 {
     [SerializeField]new AudioSource audio;
 
+    public bool LoopIsNotInterupted;
+
     [SerializeField] InteractionBase soundInteractionSource;
     [SerializeField] PowerInteraction powerInteractionSource;
     public bool PowerInteractionType;
@@ -18,6 +20,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
 
     bool canSearchInteraction;
     bool listenersOn;
+
 
     [Space(20)]
     public bool RoomAmbiantType;
@@ -66,9 +69,8 @@ public class BasicAudioEventPlayer : MonoBehaviour
         PlayerDetectionBoxCollider.isTrigger = true;
         PlayerDetectionSphereCollider.isTrigger = true;
 
-        ConfigureAudioSetUp();
-
         SetAudioSourceInitialValue();
+        ConfigureAudioSetUp();
     }
 
     void Start()
@@ -140,7 +142,10 @@ public class BasicAudioEventPlayer : MonoBehaviour
         audio.clip = AmbiantSound;
         audio.loop = true;
         audio.Play();
-        audio.Pause();
+        if (!LoopIsNotInterupted)
+        {
+            audio.Pause();
+        }
     }
 
     public void SetAudioSourceInitialValue()
@@ -176,7 +181,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
             PlayerDetectionBoxCollider.enabled = true;
 
             PlayerDetectionBoxCollider.isTrigger = true;
-            PlayerDetectionBoxCollider.size = new Vector3(maxDistanceToHear + 5f, maxDistanceToHear + 5f, PlayerDetectionBoxCollider.size.y);
+            PlayerDetectionBoxCollider.size = new Vector3(maxDistanceToHear + 5f, maxDistanceToHear + 5f, PlayerDetectionBoxCollider.size.z);
 
             AmbiantAudioInit();
         }
@@ -253,7 +258,10 @@ public class BasicAudioEventPlayer : MonoBehaviour
             canSearchInteraction = true;
 
             audio.mute = false;
-            audio.UnPause();
+            if (!LoopIsNotInterupted)
+            {
+                audio.UnPause();
+            }
         }
     }
     private void OnTriggerExit(Collider other)
@@ -264,7 +272,11 @@ public class BasicAudioEventPlayer : MonoBehaviour
 
             canSearchInteraction = false;
 
-            audio.Pause();
+            if (!LoopIsNotInterupted)
+            {
+                audio.Pause();
+            }
+
             audio.mute = true;
         }
     }
