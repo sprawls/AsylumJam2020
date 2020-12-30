@@ -24,6 +24,7 @@ public class CableVisioner : MonoBehaviour
         }
     }
     public static bool HasBlockers { get => Instance._blockers.Count > 0; }
+    public static bool IsInCableVision { get => Instance.CableVisionActive; }
 
     private static CableVisioner Instance { get => _instance; set => _instance = value; }
 
