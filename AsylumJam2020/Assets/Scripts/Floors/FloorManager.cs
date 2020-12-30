@@ -7,6 +7,11 @@ public class FloorManager : MonoBehaviour {
     private static int _currentFloor = -1;
     private static FloorManager _instance;
 
+    [Header("Refs")]
+    [SerializeField] private Light _sunObject;
+    [SerializeField] private FlashLightFollow _flashlight;
+
+    [Header("Data")]
     [SerializeField] private List<GameObject> _floorObjects;
     [SerializeField] private List<FloorData> _floorDatas;
 
@@ -35,6 +40,16 @@ public class FloorManager : MonoBehaviour {
             FloorData floorData = _floorDatas[floorID];
             if (floorData != null) {
                 RenderSettings.skybox = floorData.Skybox;
+
+                _sunObject.gameObject.transform.position = floorData.SunPosition;
+                _sunObject.gameObject.transform.rotation = floorData.SunRotation;
+                _sunObject.color = floorData.SunColor;
+                _sunObject.intensity = floorData.SunIntensity;
+
+                _flashlight.SlerpFactor = floorData.LightSlerpSpeed;
+                _flashlight.LightChangeSpeed = floorData.LightChangeSpeed;
+                _flashlight.LightAngleChange = floorData.LightAngleChange;
+                _flashlight.LightAngleGapChange = floorData.LightAngleGap;
             }
         }
     }

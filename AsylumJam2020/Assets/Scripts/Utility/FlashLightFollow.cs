@@ -20,6 +20,11 @@ public class FlashLightFollow : MonoBehaviour
 
     private float _cachedLightIntensity;
 
+    public float SlerpFactor { get => _slerpFactor; set => _slerpFactor = value; }
+    public float LightChangeSpeed { get => _lightChangeSpeed; set => _lightChangeSpeed = value; }
+    public Vector2 LightAngleChange { get => _lightAngleChange; set => _lightAngleChange = value; }
+    public Vector2 LightAngleGapChange { get => _lightAngleGapChange; set => _lightAngleGapChange = value; }
+
     private void Awake() {
         _hitsCache = new RaycastHit[4];
         _light = GetComponent<Light>();
@@ -42,11 +47,11 @@ public class FlashLightFollow : MonoBehaviour
         _light.intensity = Mathf.Lerp(_light.intensity, intensity, 0.18f);
 
         //Spot
-        float lerpValue = Mathf.PerlinNoise(Time.time * _lightChangeSpeed, Time.time * _lightChangeSpeed);
-        float newSpotAngle = Mathf.Lerp(_lightAngleChange.x, _lightAngleChange.y, lerpValue);
+        float lerpValue = Mathf.PerlinNoise(Time.time * LightChangeSpeed, Time.time * LightChangeSpeed);
+        float newSpotAngle = Mathf.Lerp(LightAngleChange.x, LightAngleChange.y, lerpValue);
         _light.spotAngle = newSpotAngle;
 
-        float innerSpotAngleGap = Mathf.Lerp(_lightAngleGapChange.x, _lightAngleGapChange.y, lerpValue);
+        float innerSpotAngleGap = Mathf.Lerp(LightAngleGapChange.x, LightAngleGapChange.y, lerpValue);
         _light.innerSpotAngle = newSpotAngle - innerSpotAngleGap;
     }
 
@@ -72,7 +77,7 @@ public class FlashLightFollow : MonoBehaviour
 
     private void LookAtTarget() {
         Quaternion newTargetRot = LookAt(transform.position, _targetPoint);
-        transform.rotation = Quaternion.Slerp(_prevRot, newTargetRot, _slerpFactor);
+        transform.rotation = Quaternion.Slerp(_prevRot, newTargetRot, SlerpFactor);
         _prevRot = transform.rotation;
     }
 

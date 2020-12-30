@@ -419,7 +419,6 @@ public class FirstPersonAIO : MonoBehaviour {
   
 
         if(advanced.maxSlopeAngle>0){
-            float a = Vector3.Angle(advanced.curntGroundNormal, transform.forward);
 
             if (advanced.isTouchingUpright && advanced.isTouchingWalkable){
 
@@ -434,8 +433,8 @@ public class FirstPersonAIO : MonoBehaviour {
             }
             else{
                 fps_Rigidbody.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
-                MoveDirection = ((transform.forward * inputXY.y * speed + transform.right * inputXY.x * walkSpeedInternal) * (fps_Rigidbody.velocity.y>0.01f ? SlopeCheck() : 0.8f));
 
+                MoveDirection = ((transform.forward * inputXY.y * speed + transform.right * inputXY.x * walkSpeedInternal) * (fps_Rigidbody.velocity.y>0.01f ? 0.65f : 0.8f));
             }
         }
         else{
@@ -485,11 +484,8 @@ public class FirstPersonAIO : MonoBehaviour {
         #endregion
 
         if (advanced.maxSlopeAngle>0){
-            
-            
             if(!didJump && advanced.lastKnownSlopeAngle>5 && advanced.isTouchingWalkable){
                 yVelocity *= SlopeCheck()/4f;
-                transform.position += Vector3.up * .0225f;
             }
             if (advanced.isTouchingUpright && !advanced.isTouchingWalkable && !didJump){
                 yVelocity +=  Physics.gravity.y;

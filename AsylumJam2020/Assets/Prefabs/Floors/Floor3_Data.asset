@@ -13,3 +13,11 @@ MonoBehaviour:
   m_Name: Floor3_Data
   m_EditorClassIdentifier: 
   _skybox: {fileID: 2100000, guid: cb908deab50f8f749bcb8b530b049995, type: 2}
+  _sunPosition: {x: 0, y: 0, z: 0}
+  _sunRotation: {x: 0.0855449, y: -0.8204129, z: 0.111536756, w: 0.554224}
+  _sunColor: {r: 1, g: 1, b: 1, a: 1}
+  _sunIntensity: 10
+  _lightSlerpSpeed: 0.13
+  _lightChangeSpeed: 0.1
+  _lightAngleChange: {x: 55, y: 65}
+  _lightAngleGap: {x: 0, y: 1}
