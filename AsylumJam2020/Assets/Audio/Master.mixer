@@ -346,6 +346,8 @@ AudioMixerController:
     name: EntityFollowerVolume
   - guid: c0e79dab4ff71a441a209b638305b2a6
     name: MusicVolumeParam
+  - guid: cd009009d62d0944ba07d14fa2fe4687
+    name: ReverbSFXReverbRoomParam
   - guid: 1e6aeb0973c74b441b4bb1d6de5960a3
     name: SFXVolumeParam
   m_AudioMixerGroupViews:
@@ -425,6 +427,7 @@ AudioMixerSnapshotController:
     9a72ebe27875cde4f8c4e07f73e9b258: 2000
     5b457a23a005bb049841334c4dc58173: 5000
     567dea53fb1c4db48a53578491dfbd88: -7502
+    3abd13a3cba354344afa80008028bad5: 0
     3e11d8942011b1040a27b047e9813ba6: 0.609
     2d644fd6823d5994da2c48332d8dac3d: 3766
     21de6db73810a1749ae07d27f71cdff6: 4.2
@@ -536,7 +539,7 @@ AudioMixerEffectController:
   - m_ParameterName: LF Reference
     m_GUID: ba45d5033de7f124f8c7fe722703beeb
   m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
+  m_EnableWetMix: 1
   m_Bypass: 0
 --- !u!244 &2698670836231590691
 AudioMixerEffectController:

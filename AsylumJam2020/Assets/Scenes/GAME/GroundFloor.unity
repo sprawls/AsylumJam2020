@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2136588112941789968, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2136588112941789968, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
       propertyPath: m_LocalPosition.x
@@ -177,6 +177,62 @@ PrefabInstance:
     - target: {fileID: 2136588112941789969, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
       propertyPath: m_Name
       value: Entity_TheFollower Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeIntSounds.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeOutSounds.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeIntSounds.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeOutSounds.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeIntSounds.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1795449639}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeOutSounds.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1795449639}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeIntSounds.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeOutSounds.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeIntSounds.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeSoundsIn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeOutSounds.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeSoundsOut
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeIntSounds.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EntityFollowingBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeOutSounds.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EntityFollowingBehaviour, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeIntSounds.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: Event_FadeOutSounds.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -794,7 +850,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1208366604}
     m_Modifications:
     - target: {fileID: 3936447480056514072, guid: 6ee315519077d3148843f93069603b2b, type: 3}
       propertyPath: m_Name
@@ -802,7 +858,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7917389699837248850, guid: 6ee315519077d3148843f93069603b2b, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7917389699837248850, guid: 6ee315519077d3148843f93069603b2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -822,15 +878,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7917389699837248850, guid: 6ee315519077d3148843f93069603b2b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7917389699837248850, guid: 6ee315519077d3148843f93069603b2b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7917389699837248850, guid: 6ee315519077d3148843f93069603b2b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7917389699837248850, guid: 6ee315519077d3148843f93069603b2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3575,6 +3631,11 @@ MonoBehaviour:
   _objectsToDeactivate:
   - {fileID: 949474200}
   - {fileID: 166536823}
+--- !u!4 &889730864 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917389699837248850, guid: 6ee315519077d3148843f93069603b2b, type: 3}
+  m_PrefabInstance: {fileID: 115146225}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &911453268 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3210764617516330575, guid: 979c576067dd0864c8365ebfc06e0ea4, type: 3}
@@ -4460,7 +4521,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-84166
+  m_Name: pb_Mesh-22166
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4876,8 +4937,9 @@ Transform:
   m_Children:
   - {fileID: 1011540389}
   - {fileID: 7867232316691447173}
+  - {fileID: 889730864}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &1228845475
 Mesh:
@@ -5559,7 +5621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1685752869252914937, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1685752869252914937, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7308,13 +7370,24 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: bef8e3bff1410c045a8864ac4edba41c, type: 2}
+--- !u!114 &1795449639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4107767460173156059, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+  m_PrefabInstance: {fileID: 13254016}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be9dff2da5789644af787b63ad92852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1795825525
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79840
+  m_Name: pb_Mesh-17286
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8125,7 +8198,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-76004
+  m_Name: pb_Mesh-12626
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9010,7 +9083,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79518
+  m_Name: pb_Mesh-16680
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9650,7 +9723,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-84164
+  m_Name: pb_Mesh-22164
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10142,7 +10215,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-84168
+  m_Name: pb_Mesh-22168
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
