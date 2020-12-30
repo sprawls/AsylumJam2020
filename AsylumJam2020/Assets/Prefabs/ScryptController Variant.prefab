@@ -362,7 +362,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
   m_Intensity: 100
-  m_Range: 30
+  m_Range: 10
   m_SpotAngle: 80
   m_InnerSpotAngle: 15
   m_CookieSize: 10
@@ -427,10 +427,10 @@ MonoBehaviour:
   _geometryMask:
     serializedVersion: 2
     m_Bits: 65
-  _slerpFactor: 0.06
-  _lightChangeSpeed: 0.08
-  _lightAngleChange: {x: 60, y: 80}
-  _lightAngleGapChange: {x: 0, y: 5}
+  _slerpFactor: 0.13
+  _lightChangeSpeed: 0.1
+  _lightAngleChange: {x: 55, y: 65}
+  _lightAngleGapChange: {x: 0, y: 1}
 --- !u!1 &5627285971288460987
 GameObject:
   m_ObjectHideFlags: 0
