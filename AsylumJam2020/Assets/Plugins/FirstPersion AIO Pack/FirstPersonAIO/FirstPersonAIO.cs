@@ -108,6 +108,7 @@ public class FirstPersonAIO : MonoBehaviour {
     #region Movement Settings
 
     public bool playerCanMove = true;
+    public bool IsMoving;
     public bool walkByDefault = true;
     public float walkSpeed = 4f;
     public KeyCode sprintKey = KeyCode.LeftShift;
@@ -494,8 +495,9 @@ public class FirstPersonAIO : MonoBehaviour {
 
         if(playerCanMove && !controllerPauseState){
           fps_Rigidbody.velocity = MoveDirection+(Vector3.up * yVelocity);
+            IsMoving = true;
 
-        } else{fps_Rigidbody.velocity = Vector3.zero;}
+        } else{fps_Rigidbody.velocity = Vector3.zero; IsMoving = false; }
 
         if(inputXY.magnitude > 0 || !IsGrounded) {
             capsule.sharedMaterial = advanced.zeroFrictionMaterial;

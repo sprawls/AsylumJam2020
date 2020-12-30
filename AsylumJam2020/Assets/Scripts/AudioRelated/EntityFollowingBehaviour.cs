@@ -10,6 +10,7 @@ public class EntityFollowingBehaviour : MonoBehaviour
     GameObject player;
     [SerializeField] Transform playerhead;
     public Vector3 SourceOffset;
+    [SerializeField]FirstPersonAIO playerController;
 
     [SerializeField] float timeRemaining = 10;
     public float MinTime;
@@ -24,22 +25,26 @@ public class EntityFollowingBehaviour : MonoBehaviour
     {
         basicAudioEventPlayer = GetComponent<BasicAudioEventPlayer>();
 ;       entityFollowingAudioSource = basicAudioEventPlayer.GetComponent<AudioSource>();
-        SourceOffset = new Vector3(0, -0.5f, -8f);
+        SourceOffset = new Vector3(0, -0.5f, -10f);
     }
 
     void Start()
     {
         MinTime = 5f;
-        MaxTime = 20f;
+        MaxTime = 10f;
         player = GameObject.FindGameObjectWithTag("Player");
         playerhead = player.GetComponentInChildren<AudioListener>().transform.parent;
+        playerController = player.GetComponentInParent<FirstPersonAIO>();
     }
 
     void Update()
     {
         this.transform.position = playerhead.position + SourceOffset;
 
-        RandomTimedEventCall();
+        if (!playerController.IsMoving)
+        {
+            RandomTimedEventCall();
+        }
     }
 
     void RandomTimedEventCall()
