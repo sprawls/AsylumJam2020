@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(Animator))]
 public class InteractionBase : Powerable
 {
     public event Action<bool> OnInteractionTriggered;
@@ -41,6 +40,8 @@ public class InteractionBase : Powerable
     #endregion
 
     #region LIFECYCLE
+
+    public virtual InteractionBase GetInteraction() { return this; }
 
     protected override void Awake() {
         base.Awake();

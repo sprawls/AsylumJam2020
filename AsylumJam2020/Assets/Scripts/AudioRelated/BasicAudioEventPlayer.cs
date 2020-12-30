@@ -340,11 +340,11 @@ public class BasicAudioEventPlayer : MonoBehaviour
         }
         if (StateInteractionType)
         {
-            if (stateInteractionSource._stateActive)
+            if (stateInteractionSource.StateActive)
             {
                 soundMethod[2]();
             }
-            if (!stateInteractionSource._stateActive)
+            if (!stateInteractionSource.StateActive)
             {
                 soundMethod[3]();
             }
