@@ -117,7 +117,7 @@ Material:
     - _SphereMaskMax1: 0
     - _SphereMaskMin: 0.643
     - _SphereMaskMin1: 1
-    - _SphereMaskSize: 2
+    - _SphereMaskSize: 4.7
     - _SphereMaskSize1: 2.78
     - _SrcBlend: 1
     - _Surface: 0
