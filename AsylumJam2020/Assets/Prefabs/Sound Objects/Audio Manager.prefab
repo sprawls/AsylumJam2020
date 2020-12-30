@@ -43,12 +43,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35d0517c634f1244939e823b1b557f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LayerOfSound: 0
+  IsInStairCase: 0
+  InGameSoundsSetting: 0
   AmbianceMixer: {fileID: -5985388206131719539, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   AmbianceVolume: 0
   AmbianceMute: 0
   SFXMixer: {fileID: -2871390159717383345, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   SFXVolume: 0
   SFXMute: 0
+  ReverbSFXMixer: {fileID: -3383384457232288232, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
+  ReverbRoom: 0
   MusicMixer: {fileID: 7950623741608692425, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   MusicVolume: 0
   MusicMute: 0
@@ -59,7 +64,6 @@ MonoBehaviour:
   - {fileID: 776247163845820108, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   - {fileID: -5148750996232634702, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
   ResetVolumeLvl: 0
-  InGameSoundsSetting: 0
   FadeSpeedMultiplier: 0
   FadeInTest: 0
   FadeOutTest: 0

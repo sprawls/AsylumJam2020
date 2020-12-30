@@ -8,6 +8,9 @@ public class AudioManager : MonoBehaviour
 {
     private const float MuteValue = -80.00f;
 
+    public int LayerOfSound;
+    public bool IsInStairCase;
+
     public bool InGameSoundsSetting;
 
     [Header("Ambiance")]
@@ -19,6 +22,9 @@ public class AudioManager : MonoBehaviour
     public AudioMixerGroup SFXMixer;
     public float SFXVolume;
     public bool SFXMute;
+    public AudioMixerGroup ReverbSFXMixer;
+    private const float initialReverbroomValue = -3891.00f;
+    public float ReverbRoom;
 
     [Header("Music")]
     public AudioMixerGroup MusicMixer;
@@ -47,9 +53,17 @@ public class AudioManager : MonoBehaviour
         SetMixerVolumeParam();
         FadeSpeedMultiplier = 10f;
     }
+    private void Start()
+    {
+
+    }
 
     void Update()
     {
+        LayerOfSound = FloorManager.CurrentFloor;
+        IsInStairCase = FloorManager.IsInStaircase;
+        SetReverbBusRoomLvl();
+
         if (InGameSoundsSetting)
         {
             SetMixerVolumeParam();
@@ -74,6 +88,21 @@ public class AudioManager : MonoBehaviour
             Event_ResetVolumeLvl.Invoke();
             ResetVolumeLvl = false;
         }
+
+        //Pour escalier
+        if (FloorManager.IsInStaircase)
+        {
+            ReverbRoom = initialReverbroomValue + 500.0f;
+        }
+        else
+        {
+            ReverbRoom = initialReverbroomValue;
+        }
+    }
+
+    public void SetReverbBusRoomLvl()
+    {
+        ReverbSFXMixer.audioMixer.SetFloat("ReverbSFXReverbRoomParam", ReverbRoom);
     }
 
     public void SetMixerVolumeParam()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 
 public class EntityFollowingBehaviour : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class EntityFollowingBehaviour : MonoBehaviour
     public AudioMixerGroup AudioGroup;
 
     private const float MuteValue = -80.0f;
+
+    public UnityEvent Event_FadeOutSounds;
+    public UnityEvent Event_FadeIntSounds;
 
     void Awake()
     {
@@ -45,6 +49,7 @@ public class EntityFollowingBehaviour : MonoBehaviour
         {
             RandomTimedEventCall();
         }
+
     }
 
     void RandomTimedEventCall()
@@ -64,6 +69,15 @@ public class EntityFollowingBehaviour : MonoBehaviour
     {
         float randNumb = UnityEngine.Random.Range(MinTime, MaxTime);
         timeRemaining = randNumb;
+    }
+
+    public void FadeSoundsOut()
+    {
+        StartCoroutine(FadeOut(AudioGroup.audioMixer, "EntityFollowerVolume", 30));
+    }
+    public void FadeSoundsIn()
+    {
+        StartCoroutine(FadeIn(AudioGroup.audioMixer, "EntityFollowerVolume", 30));
     }
 
     void ChangeEntitySourceParam()
