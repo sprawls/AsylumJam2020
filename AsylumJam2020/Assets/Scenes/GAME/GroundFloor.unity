@@ -178,6 +178,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: Entity_TheFollower Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8738204775143994239, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
+    - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 0.21794647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.30518353
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inSlope
+      value: -0.022628946
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
+      value: -1.0323269
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inWeight
+      value: 0.25800171
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outWeight
+      value: 0.12676336
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573282520196526281, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].tangentMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7729509755837803650, guid: 08832a3744cc680439a81f19fc3b7a89, type: 3}
       propertyPath: periodY
       value: 0.25

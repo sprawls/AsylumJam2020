@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 
 public class EntityFollowingBehaviour : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class EntityFollowingBehaviour : MonoBehaviour
     GameObject player;
     [SerializeField] Transform playerhead;
     public Vector3 SourceOffset;
+    [SerializeField]FirstPersonAIO playerController;
 
     [SerializeField] float timeRemaining = 10;
     public float MinTime;
@@ -20,26 +22,34 @@ public class EntityFollowingBehaviour : MonoBehaviour
 
     private const float MuteValue = -80.0f;
 
+    public UnityEvent Event_FadeOutSounds;
+    public UnityEvent Event_FadeIntSounds;
+
     void Awake()
     {
         basicAudioEventPlayer = GetComponent<BasicAudioEventPlayer>();
 ;       entityFollowingAudioSource = basicAudioEventPlayer.GetComponent<AudioSource>();
-        SourceOffset = new Vector3(0, -0.5f, -8f);
+        SourceOffset = new Vector3(0, -0.5f, -10f);
     }
 
     void Start()
     {
         MinTime = 5f;
-        MaxTime = 20f;
+        MaxTime = 10f;
         player = GameObject.FindGameObjectWithTag("Player");
         playerhead = player.GetComponentInChildren<AudioListener>().transform.parent;
+        playerController = player.GetComponentInParent<FirstPersonAIO>();
     }
 
     void Update()
     {
         this.transform.position = playerhead.position + SourceOffset;
 
-        RandomTimedEventCall();
+        if (!playerController.IsMoving)
+        {
+            RandomTimedEventCall();
+        }
+
     }
 
     void RandomTimedEventCall()
@@ -59,6 +69,15 @@ public class EntityFollowingBehaviour : MonoBehaviour
     {
         float randNumb = UnityEngine.Random.Range(MinTime, MaxTime);
         timeRemaining = randNumb;
+    }
+
+    public void FadeSoundsOut()
+    {
+        StartCoroutine(FadeOut(AudioGroup.audioMixer, "EntityFollowerVolume", 30));
+    }
+    public void FadeSoundsIn()
+    {
+        StartCoroutine(FadeIn(AudioGroup.audioMixer, "EntityFollowerVolume", 30));
     }
 
     void ChangeEntitySourceParam()
