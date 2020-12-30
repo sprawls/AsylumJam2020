@@ -48,12 +48,11 @@ public class Powerable : MonoBehaviour
 
     #region LIFECYCLE
 
-    private void Initialize() {
+    protected virtual void Initialize() {
         if(!IsInit) {
             IsInit = true;
             _currentPowerSources = new List<PowerSource>(4);
         }
-
     }
 
     protected virtual void Awake() {
