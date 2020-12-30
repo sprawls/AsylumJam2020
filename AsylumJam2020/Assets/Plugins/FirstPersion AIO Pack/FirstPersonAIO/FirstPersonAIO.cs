@@ -311,7 +311,7 @@ public class FirstPersonAIO : MonoBehaviour {
         #endregion
 
         #region Movement Settings - Start  
-        capsule.radius = capsule.height/4;
+        //capsule.radius = capsule.height/4;
         staminaInternal = staminaLevel;
         advanced.zeroFrictionMaterial = new PhysicMaterial("Zero_Friction");
         advanced.zeroFrictionMaterial.dynamicFriction =0;
@@ -420,23 +420,27 @@ public class FirstPersonAIO : MonoBehaviour {
   
 
         if(advanced.maxSlopeAngle>0){
-            if(advanced.isTouchingUpright && advanced.isTouchingWalkable){
+            float a = Vector3.Angle(advanced.curntGroundNormal, transform.forward);
+
+            if (advanced.isTouchingUpright && advanced.isTouchingWalkable){
 
                 MoveDirection = (transform.forward * inputXY.y * speed + transform.right * inputXY.x * walkSpeedInternal); 
-                if(!didJump){fps_Rigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;}              
-                }
-                else if(advanced.isTouchingUpright && !advanced.isTouchingWalkable){
-                    fps_Rigidbody.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
-                }
-                
-                else{
-                    
+                if(!didJump){
+                    fps_Rigidbody.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezeRotation;
+                }              
+            }
+            else if(advanced.isTouchingUpright && !advanced.isTouchingWalkable){
+
+                fps_Rigidbody.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
+            }
+            else{
                 fps_Rigidbody.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
                 MoveDirection = ((transform.forward * inputXY.y * speed + transform.right * inputXY.x * walkSpeedInternal) * (fps_Rigidbody.velocity.y>0.01f ? SlopeCheck() : 0.8f));
-                }
+
+            }
         }
         else{
-        MoveDirection = (transform.forward * inputXY.y * speed + transform.right * inputXY.x * walkSpeedInternal);
+            MoveDirection = (transform.forward * inputXY.y * speed + transform.right * inputXY.x * walkSpeedInternal);
         }
 
         
@@ -457,41 +461,42 @@ public class FirstPersonAIO : MonoBehaviour {
         inputXY = new Vector2(horizontalInput, verticalInput);
         if(inputXY.magnitude > 1) { inputXY.Normalize(); }
 
-            #region Jump
-            yVelocity = fps_Rigidbody.velocity.y;
+        #region Jump
+        yVelocity = fps_Rigidbody.velocity.y;
             
-            if(IsGrounded && jumpInput && jumpPowerInternal > 0 && !didJump){
-                if(advanced.maxSlopeAngle>0){
-                    if(advanced.isTouchingFlat || advanced.isTouchingWalkable){
-                            didJump=true;
-                            jumpInput=false;
-                            yVelocity += fps_Rigidbody.velocity.y<0.01f? jumpPowerInternal : jumpPowerInternal/3;
-                            advanced.isTouchingWalkable = false;
-                            advanced.isTouchingFlat = false;
-                            advanced.isTouchingUpright = false;
-                            fps_Rigidbody.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
-                    }
-                    
-                }else{
+        if(IsGrounded && jumpInput && jumpPowerInternal > 0 && !didJump){
+            if(advanced.maxSlopeAngle>0){
+                if(advanced.isTouchingFlat || advanced.isTouchingWalkable){
                     didJump=true;
                     jumpInput=false;
-                    yVelocity += jumpPowerInternal;
+                    yVelocity += fps_Rigidbody.velocity.y<0.01f? jumpPowerInternal : jumpPowerInternal/3;
+                    advanced.isTouchingWalkable = false;
+                    advanced.isTouchingFlat = false;
+                    advanced.isTouchingUpright = false;
+                    fps_Rigidbody.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
                 }
-        
+                
+            }else{
+                didJump=true;
+                jumpInput=false;
+                yVelocity += jumpPowerInternal;
             }
+        
+        }
+        #endregion
 
-            if(advanced.maxSlopeAngle>0){
+        if (advanced.maxSlopeAngle>0){
             
             
             if(!didJump && advanced.lastKnownSlopeAngle>5 && advanced.isTouchingWalkable){
-            yVelocity *= SlopeCheck()/4;
+                yVelocity *= SlopeCheck()/4f;
+                transform.position += Vector3.up * .0225f;
             }
-            if(advanced.isTouchingUpright && !advanced.isTouchingWalkable && !didJump){
+            if (advanced.isTouchingUpright && !advanced.isTouchingWalkable && !didJump){
                 yVelocity +=  Physics.gravity.y;
             }
         }
 
-            #endregion
 
         if(playerCanMove && !controllerPauseState){
           fps_Rigidbody.velocity = MoveDirection+(Vector3.up * yVelocity);
@@ -505,12 +510,11 @@ public class FirstPersonAIO : MonoBehaviour {
   
         fps_Rigidbody.AddForce(Physics.gravity * (advanced.gravityMultiplier - 1));
         
-        
         if(advanced.FOVKickAmount>0){
             if(isSprinting && !isCrouching && playerCamera.fieldOfView != (baseCamFOV+(advanced.FOVKickAmount*2)-0.01f)){
                 if(Mathf.Abs(fps_Rigidbody.velocity.x)> 0.5f || Mathf.Abs(fps_Rigidbody.velocity.z)> 0.5f){
                     playerCamera.fieldOfView = Mathf.SmoothDamp(playerCamera.fieldOfView,baseCamFOV+(advanced.FOVKickAmount*2),ref advanced.fovRef,advanced.changeTime);
-                    }
+                }
                 
             }
             else if(playerCamera.fieldOfView != baseCamFOV){ playerCamera.fieldOfView = Mathf.SmoothDamp(playerCamera.fieldOfView,baseCamFOV,ref advanced.fovRef,advanced.changeTime*0.5f);}

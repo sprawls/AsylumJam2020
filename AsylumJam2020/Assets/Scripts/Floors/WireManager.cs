@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Shapes;
 
 public class WireManager : MonoBehaviour
 {
     private PowerWire[] _allWires;
     private List<PowerWire> _activatedWires;
     
-    public static float WIRE_VISIBLE_RANGE = 5f;
-    public static float DEFAULT_WIRE_THICKNESS = 1f;
+    public static float WIRE_VISIBLE_RANGE = 18f;
+    public static float DEFAULT_WIRE_THICKNESS = 2.5f;
 
     protected void Awake()
     {
@@ -31,8 +32,10 @@ public class WireManager : MonoBehaviour
     }
 
 
+
     private void RegisterAllWires() {
         _allWires = FindObjectsOfType<PowerWire>(true);
+
     }
 
     private void ActivateWiresOfFloor(int floor) {

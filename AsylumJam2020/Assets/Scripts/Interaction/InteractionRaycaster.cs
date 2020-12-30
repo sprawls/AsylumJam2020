@@ -58,7 +58,7 @@ public class InteractionRaycaster : MonoBehaviour
         if (amtHits > 0) {
             InteractionBase inte = _hits[0].transform.gameObject.GetComponent<InteractionBase>();
             if (inte != null) {
-                CurrentInteraction = inte;
+                CurrentInteraction = inte.GetInteraction();
             }
         } else {
             CurrentInteraction = null;

@@ -4,12 +4,30 @@ using UnityEngine;
 
 public class StateInteraction : InteractionBase
 {
-    [SerializeField] internal bool _stateActive = false;
-
+    [SerializeField] private bool stateActive = false;
     [SerializeField] internal bool _powerBased = false;
 
+    [Header("Revert")]
+    [SerializeField, Tooltip("If >0, will revert to state inactive after X Seconds.")] 
+    private float _revertOnTime = -1f;
+    [SerializeField, Tooltip("If >0, will revert to state inactive when X Units away from player.")]
+    private float _revertOnDistance = -1f;
+
+    private float _timeActivated = 0f;
+
+    //static
     private static string ANIM_PARAM_STATE = "StateActive";
     private static int ANIM_PARAM_STATE_HASH = -1;
+
+    internal bool StateActive { 
+        get => stateActive;
+        set
+        {
+            stateActive = value;
+
+            if (stateActive) _timeActivated = Time.time;
+        }
+    }
 
     #region LIFECYCLE
 
@@ -20,12 +38,24 @@ public class StateInteraction : InteractionBase
         UpdateAnimatorState();
     }
 
+    protected override void Update() {
+        base.Update();
+
+        if(stateActive) {
+            if(_revertOnTime > 0f && Time.time > _timeActivated + _revertOnTime) {
+                Callback_OnInteracted();
+            } 
+            else if(_revertOnDistance > 0f && Vector3.Distance(transform.position, ScryptPlayer.PlayerPosition) > _revertOnDistance) {
+                Callback_OnInteracted();
+            } 
+        }
+    }
+
     #endregion
 
-    private void UpdateAnimatorState() {
+    protected virtual void UpdateAnimatorState() {
         if (Animator != null) {
-            Animator.SetBool(ANIM_PARAM_STATE_HASH, _stateActive);
-            Animator.SetBool("IsOpenFront", _stateActive);
+            Animator.SetBool(ANIM_PARAM_STATE_HASH, StateActive);
         }
     }
 
@@ -43,7 +73,7 @@ public class StateInteraction : InteractionBase
         if (Powered && !_powerBased) {
             base.Callback_OnInteracted();
 
-            _stateActive = !_stateActive;
+            StateActive = !StateActive;
 
             UpdateAnimatorState();
         }
@@ -57,7 +87,7 @@ public class StateInteraction : InteractionBase
         base.OnPoweredOn();
 
         if(_powerBased) {
-            _stateActive = true;
+            StateActive = true;
         }
     }
 
@@ -65,7 +95,7 @@ public class StateInteraction : InteractionBase
         base.OnPoweredOff();
 
         if (_powerBased) {
-            _stateActive = false;
+            StateActive = false;
         }
     }
 
