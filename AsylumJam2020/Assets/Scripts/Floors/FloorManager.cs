@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FloorManager : MonoBehaviour {
     public static event Action<int> OnFloorChanged;
     private static int _currentFloor = -1;
