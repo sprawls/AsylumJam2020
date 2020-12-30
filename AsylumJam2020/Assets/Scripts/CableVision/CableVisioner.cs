@@ -16,13 +16,14 @@ public class CableVisioner : MonoBehaviour
     private List<GameObject> _blockers;
     private bool _cableVisionActive = false;
 
-    public bool CableVisionActive { 
+    public bool CableVisionActive {
         get => _cableVisionActive;
-        set { 
+        set {
             _cableVisionActive = value;
             _cableVisionAnimator.SetBool(ANIM_PARAM_VISIONACTIVE, value);
         }
     }
+    public static bool HasBlockers { get => Instance._blockers.Count > 0; }
 
     private static CableVisioner Instance { get => _instance; set => _instance = value; }
 

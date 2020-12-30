@@ -240,6 +240,10 @@ PrefabInstance:
       propertyPath: _revertOnDistance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7767559764696327647, guid: 6a01570fbcf056c4ab3ac1397192c3f3, type: 3}
+      propertyPath: _amountPowerSourceNeeded
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a01570fbcf056c4ab3ac1397192c3f3, type: 3}
 --- !u!4 &5196489784559068628 stripped

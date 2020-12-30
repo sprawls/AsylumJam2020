@@ -221,7 +221,7 @@ Transform:
   - {fileID: 3045584622852222591}
   - {fileID: 4460512283171802129}
   m_Father: {fileID: 8242281768548545947}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9055453841410350894
 GameObject:
@@ -341,9 +341,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4034828760011440490, guid: 92ee174d48a0c8c488bbff5555b6ae6c, type: 3}
+      propertyPath: _amountPowerSourceNeeded
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7985358693438207752, guid: 92ee174d48a0c8c488bbff5555b6ae6c, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7985358693438207752, guid: 92ee174d48a0c8c488bbff5555b6ae6c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -448,7 +452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1764517654369181935, guid: b6d5be4213d49394c9456f2aa08c97fc, type: 3}
       propertyPath: m_Name
-      value: Staircase Middle - Infinite
+      value: Staircase Middle - Infinite Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8756612875400515335, guid: b6d5be4213d49394c9456f2aa08c97fc, type: 3}
       propertyPath: m_IsActive
