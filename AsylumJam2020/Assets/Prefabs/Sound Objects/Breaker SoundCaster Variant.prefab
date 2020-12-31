@@ -7,6 +7,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
+      value: 0.23745483
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
+      value: 0.15903485
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
+      value: -0.022408929
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inSlope
+      value: -0.20855793
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inWeight
+      value: 0.7132015
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
+      value: -0.20855793
+      objectReference: {fileID: 0}
     - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -78,19 +102,19 @@ PrefabInstance:
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: 5a17ca8989e8ab645a669093cc8a1faa, type: 3}
+      objectReference: {fileID: 8300000, guid: 7b23819cdf89baf478a1786b9ed95507, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: b74353772be54e349968d97e7592e13b, type: 3}
+      objectReference: {fileID: 8300000, guid: 332261680517ebe4ab13aa51afc9bbdd, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 70d739e0e0274b3409326569834eb2d9, type: 3}
+      objectReference: {fileID: 8300000, guid: 40ec6db427a102a4c9db5d18aa5493b2, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionONSounds.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 81d13b6e542900d4eb09846f42f7e5ac, type: 3}
+      objectReference: {fileID: 8300000, guid: e84a87e1adae2d64da3e30461dfe721a, type: 3}
     - target: {fileID: 6063777084947027867, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: InteractionOffSounds.Array.data[0]
       value: 
