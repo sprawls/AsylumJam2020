@@ -19,8 +19,23 @@ public class CableVisioner : MonoBehaviour
     public bool CableVisionActive {
         get => _cableVisionActive;
         set {
-            _cableVisionActive = value;
-            _cableVisionAnimator.SetBool(ANIM_PARAM_VISIONACTIVE, value);
+            if (_cableVisionActive != value)
+            {
+
+                _cableVisionActive = value;
+                _cableVisionAnimator.SetBool(ANIM_PARAM_VISIONACTIVE, value);
+             
+                if (_cableVisionActive)
+                {
+                    BasicAudioEventPlayer.PlayInteractionOnEvent.Invoke();
+                    SelectStateOfSound();
+                }
+                else
+                {
+                    BasicAudioEventPlayer.PlayInteractionOffEvent.Invoke();
+                    SelectStateOfSound();
+                }
+            }         
         }
     }
     public static bool HasBlockers { get => Instance._blockers.Count > 0; }
@@ -28,9 +43,18 @@ public class CableVisioner : MonoBehaviour
 
     private static CableVisioner Instance { get => _instance; set => _instance = value; }
 
+    public BasicAudioEventPlayer BasicAudioEventPlayer;
+    bool isPlaying;
+
     private void Awake() {
         Instance = this;
         _blockers = new List<GameObject>(4);
+
+        BasicAudioEventPlayer = GetComponent<BasicAudioEventPlayer>();
+    }
+    private void Start()
+    {
+        BasicAudioEventPlayer.audio.loop = true;
     }
 
     private void Update() {
@@ -48,6 +72,28 @@ public class CableVisioner : MonoBehaviour
         if(Instance._blockers.Count <= 0) {
             Instance._screenObject.SetActive(true);
         }
+    }
+
+    //Pour Son
+    void SelectStateOfSound()
+    {
+        if (!isPlaying)
+        {
+            isPlaying = true;
+            BasicAudioEventPlayer.PlayInteractionOnEvent.Invoke();
+            BasicAudioEventPlayer.PlayLoop();
+        }
+        else
+        {
+            isPlaying = false;
+            StartCoroutine(StopRadioSound());
+        }
+    }
+    IEnumerator StopRadioSound()
+    {
+        BasicAudioEventPlayer.PlayInteractionOffEvent.Invoke();
+        yield return new WaitForSeconds(0.25f);
+        BasicAudioEventPlayer.audio.Stop();
     }
 
 }
