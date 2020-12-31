@@ -1063,6 +1063,58 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customMat.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customMat.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0d818ec9a0cd7d241a57df3bfb4c217a, type: 2}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 31b639aa00571f942b00b84cc9e08c5d, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 63d5c78c7ee16c94dbea3c4a600662df, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a08e4a13dc0a4c64b974b38f19d4b868, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: d24b7beead0c42f46a617795f931aa74, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7fdb374be0e1fc040a1e69021261b9f5, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 91d2e328fb5e3f643806768a3a90f696, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[6]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a73300b1d711304d84bbedcddeea2b4, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[7]
+      value: 
+      objectReference: {fileID: 8300000, guid: d070ece8a6973ee4d8b0971e363376d3, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8a2052d1d2b34dd4b8ba701f39efeb9f, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+      propertyPath: dynamicFootstep.customClipSet.Array.data[11]
+      value: 
+      objectReference: {fileID: 8300000, guid: d24b7beead0c42f46a617795f931aa74, type: 3}
+    - target: {fileID: 114051214696948948, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
       propertyPath: dynamicFootstep.rockAndConcreteMat.Array.size
       value: 1
       objectReference: {fileID: 0}
