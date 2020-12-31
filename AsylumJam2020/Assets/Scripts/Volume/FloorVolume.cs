@@ -9,8 +9,8 @@ public class FloorVolume : MonoBehaviour
 
     private void Start() {
         if (_startsActive) {
-            Debug.Log(string.Format("Floor {0} started Active", _floorID), gameObject);
-            Activate();
+            //Debug.Log(string.Format("Floor {0} started Active", _floorID), gameObject);
+            //Activate();
         }
     }
 
