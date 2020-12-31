@@ -8,8 +8,13 @@ public class InteractionRaycaster : MonoBehaviour
     [SerializeField] private LayerMask _interactionLayerMask = default;
     [SerializeField] private float _interactionDistance = 5;
 
+    [Header("Fullscreen Interaction")]
+    [SerializeField] private Transform _parent = default;
+
+
     private RaycastHit[] _hits;
     private InteractionBase _currentInteraction = null;
+    private static FullscreenInteraction _currentFullscreenInteraction = null;
 
     #region ACCESSORS 
 
@@ -33,10 +38,29 @@ public class InteractionRaycaster : MonoBehaviour
 
         }
     }
+    public static FullscreenInteraction CurrentFullscreenInteraction { 
+        get => _currentFullscreenInteraction;
+        private set { _currentFullscreenInteraction = value; Debug.Log("New Fullscreen inte : " + _currentFullscreenInteraction); }
+    }
+
+    //Static
+    public static bool IsInFullscreenInteraction
+    {
+        get { return CurrentFullscreenInteraction != null; }
+    }
+
 
     #endregion
 
     #region LIFECYCLE
+
+    private void OnEnable() {
+        FullscreenInteraction.OnFullscreenInteractionTriggered += Callback_StartFullscreenInte;
+    }
+
+    private void OnDisable() {
+        FullscreenInteraction.OnFullscreenInteractionTriggered -= Callback_StartFullscreenInte;
+    }
 
     private void Awake() {
         _hits = new RaycastHit[4];
@@ -49,6 +73,27 @@ public class InteractionRaycaster : MonoBehaviour
 
     #endregion
 
+    #region FullscreenInte
+
+    private void Callback_StartFullscreenInte(FullscreenInteraction inte) {
+        if(_currentFullscreenInteraction == null) {
+            _currentFullscreenInteraction = inte;
+            _currentFullscreenInteraction.GoToNewParent(_parent);
+        } else {
+            Debug.LogWarning("Trying to start fullscreen interaction but another one is already active !", inte.gameObject);
+        }
+    }
+
+    private void StopFullScreenInte() {
+        if (_currentFullscreenInteraction != null) {
+            _currentFullscreenInteraction.RevertToOldParent();
+            _currentFullscreenInteraction = null;
+        } else {
+            Debug.LogWarning("Trying to remove fullscreen intereaction but none are active !");
+        }
+    }
+
+    #endregion
 
     #region Logic
 
@@ -67,7 +112,11 @@ public class InteractionRaycaster : MonoBehaviour
 
     private void HandleInputs() {
         if(Input.GetMouseButtonDown(0)) {
-            if(CurrentInteraction != null) {
+            if(IsInFullscreenInteraction) {
+                StopFullScreenInte();
+            } 
+            else if(CurrentInteraction != null) {
+                Debug.Log("Interacting with : " + CurrentInteraction);
                 CurrentInteraction.Callback_OnInteracted();
             }
         }

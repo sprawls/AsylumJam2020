@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3270842607048508258}
-  m_Layer: 0
+  - component: {fileID: 5970841140789017251}
+  - component: {fileID: 6898180600216407837}
+  m_Layer: 6
   m_Name: INTE_Note
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,11 +30,56 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7913294340606727654}
-  - {fileID: 7697130211328888327}
+  - {fileID: 5217313439948658267}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4784804687739419601
+--- !u!114 &5970841140789017251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3067044703728730900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3809027260cd8040896848386c47904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _amountPowerSourceNeeded: 0
+  _togglePowerEveryChange: 0
+  _powerableAnimator: {fileID: 0}
+  Event_Highlighted_Start:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_Highlighted_Stop:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_Interaction_On:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_Interaction_Off:
+    m_PersistentCalls:
+      m_Calls: []
+  Event_Interaction_Failed:
+    m_PersistentCalls:
+      m_Calls: []
+  _noteParent: {fileID: 5217313439948658267}
+  _notePrefab: {fileID: 0}
+--- !u!65 &6898180600216407837
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3067044703728730900}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 0.15, z: 0.4}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8167095451227642549
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,42 +87,28 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7697130211328888327}
-  - component: {fileID: 2190617573135964541}
+  - component: {fileID: 5217313439948658267}
   m_Layer: 0
-  m_Name: InteractionZone
+  m_Name: NoteParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7697130211328888327
+--- !u!4 &5217313439948658267
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4784804687739419601}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01605526, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 8167095451227642549}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.033, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children: []
   m_Father: {fileID: 3270842607048508258}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2190617573135964541
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4784804687739419601}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.29, y: 0.07, z: 0.37}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &7663739238739112461
 PrefabInstance:
   m_ObjectHideFlags: 0
