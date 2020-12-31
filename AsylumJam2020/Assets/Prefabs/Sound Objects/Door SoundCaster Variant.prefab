@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: MaxDistance
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6063777084947027846, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -8933831902261794606, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
     - target: {fileID: 6063777084947027847, guid: d81ee66d688bbfb4faaee502742978e2, type: 3}
       propertyPath: m_RootOrder
       value: 0
