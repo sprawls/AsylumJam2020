@@ -61,7 +61,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5159460720280657184, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
       propertyPath: m_Volume
-      value: 0.567
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159460720280657184, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 8716709625656674270, guid: e906fd8e007decc439ac418cae7dd21e, type: 2}
+    - target: {fileID: 5159460720280657184, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0.15833333
       objectReference: {fileID: 0}
     - target: {fileID: 5159460720280657213, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
       propertyPath: OtherSounds.Array.size
@@ -91,5 +99,17 @@ PrefabInstance:
       propertyPath: OtherSounds.Array.data[5]
       value: 
       objectReference: {fileID: 8300000, guid: 3977d0d1ea2122240b0128af30634cb2, type: 3}
+    - target: {fileID: 7027564816533094763, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
+      propertyPath: periodZ
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027564816533094763, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
+      propertyPath: amplitudeX
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7027564816533094763, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
+      propertyPath: amplitudeY
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 275e2f373b7f768408e8807b6be927e4, type: 3}
