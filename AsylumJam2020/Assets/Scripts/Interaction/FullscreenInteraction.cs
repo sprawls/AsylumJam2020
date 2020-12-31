@@ -17,6 +17,8 @@ public class FullscreenInteraction : InteractionBase
 
     private float _animTime = 0.4f;
 
+    public BasicAudioEventPlayer basicAudioEventPlayer;
+
     protected override void Awake() {
         _noteInstance = GameObject.Instantiate(_notePrefab, _noteParent, false);
         _ogPosition = _noteInstance.transform.localPosition;
@@ -25,6 +27,8 @@ public class FullscreenInteraction : InteractionBase
 
         _noteInstance.SetActive(false);
         base.Awake();
+
+        basicAudioEventPlayer = GetComponentInChildren<BasicAudioEventPlayer>();
     }
 
     public override void Callback_OnInteracted() {
@@ -44,6 +48,11 @@ public class FullscreenInteraction : InteractionBase
     public void GoToNewParent(Transform newParent) {
         StopPreviousSequence();
 
+        if (basicAudioEventPlayer != null)
+        {
+            basicAudioEventPlayer.PlayInteractionOnEvent.Invoke();
+        }
+
         _noteInstance.SetActive(true);
         _noteInstance.transform.parent = newParent;
         _sequence = DOTween.Sequence();
@@ -54,6 +63,11 @@ public class FullscreenInteraction : InteractionBase
 
     public void RevertToOldParent() {
         StopPreviousSequence();
+
+        if (basicAudioEventPlayer != null)
+        {
+            basicAudioEventPlayer.PlayInteractionOffEvent.Invoke();
+        }
 
         _noteInstance.transform.parent = _noteParent;
         _sequence = DOTween.Sequence();
