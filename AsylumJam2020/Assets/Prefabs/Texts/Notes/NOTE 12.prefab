@@ -9,35 +9,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: 'It''s looking more and more likely that I''m going to die here. And
-        I think I know what''s going to kill me, too.
-
-
-        It won''t be thirst.
-        It won''t be hunger. It won''t even be that loud motherfucker I hear who
-        keeps fucking with the breakers. It''ll be time.
-
-
-        I''m thirty on
-        this floor. I was forty-something on the one before. Who knows if I''ll be
-        twenty or seventy on the next.
-
-
-        I''m aging back and forth with every
-        step I take, so there''s no way to tell how long I''ve been here. But I''ve
-        been rotting in a straight line for what feels like months now.
-
-
-        But
-        if anyone finds my message - especially you, the loud bastard that''s been
-        stalking me - know this:
-
-
-        My name is Devon Robinson, and I have
-        a pregnant girlfriend to get back to. I''m not going down without a fight.
-        Fuck with me at your own risk.
-
-'
+      value: "\nIt's looking more and more likely that I'm going to die here. And
+        I think I know what's going to kill me, too. It won't be thirst. It won't
+        be hunger. It won't even be that loud motherfucking... THING I keep hearing.
+        \n\nIt'll be TIME.\n\nI'm thirty on this floor. I was forty-something the
+        one before. Who knows if I'll be twenty or seventy on the next. \n\nI'm aging
+        back and forth with every step I take, so there's no way to tell how long
+        I've been here. But I've been rotting in a straight line for what feels like
+        months now.\n\nThat said, if anyone finds my message - especially you, the
+        loud bastard that's been stalking me - know this: my name is Devon Robinson,
+        and I have a pregnant girlfriend to get back to. \n\nYou do NOT want to find
+        out what I'm willing to do to see them again.\n"
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder

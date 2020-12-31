@@ -9,8 +9,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: 'The world outside changed again. And it''s even less familiar than
-        before.
+      value: '
+
+        The world outside changed again. And it''s even less familiar
+        than before.
 
 
         Part of me wants to break a window and jump. But there''s
@@ -23,20 +25,17 @@ PrefabInstance:
 
 
         The only way out
-        is through the top, I guess.
+        is through the top, I guess. But once I make it up there - IF I make it up
+        there - will the outside world hear me? And if it does, will it even be able
+        to do anything to help?
 
 
-        But once I make it up there - IF I
-        make it up there - will the outside world hear me? And if it does, will it
-        even be able to do anything to help?
+        The more I think about it, the more I want
+        to give up. So I won''t. I''ll  just keep climbing, as long as it takes.
 
 
-        The more I think about it,
-        the more I want to give up. So I won''t. I''ll  just keep climbing, as long
-        as it takes.
-
-
-        I''d do anything to see them again.'
+        I''ll
+        do anything to see them again.'
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder

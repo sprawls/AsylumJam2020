@@ -9,29 +9,32 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: 'When I look out the window here, I can see the world I left behind.
+      value: '
+
+        When I look out the window here, I can see the world I left
+        behind.
 
 
-        But
-        the car I see in the parking lot isn''t MY car. And that world isn''t the
-        one I left behind, either.
+        But the car I see in the parking lot isn''t MY car. And
+        that world isn''t the one I left behind, either.
 
 
-        When I changed floors, so did the outside
-        world. And it''ll only keep changing the deeper I go into this place.
+        When I changed
+        floors, so did the outside world. And it''ll only keep changing the deeper
+        I go into this place.
 
 
-        Even
-        if i get out of here, will I be going back to the place I belong?
+        Even if i get out of here, will I be going
+        back to the place I belong?
 
 
-        Even
-        if I get out of here, will I still be the person I was when I first came
-        in?
+        Even if I get out of here, will I still
+        be the person I was when I first came in?
 
 
-        And even if I find the right place, the right me... How will
-        I be sure I''ve truly left this hellhole behind?'
+        And even if I find the
+        right place, the right me... How will I be sure I''ve truly left this hellhole
+        behind?'
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder
