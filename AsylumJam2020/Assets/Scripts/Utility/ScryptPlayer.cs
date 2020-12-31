@@ -37,6 +37,6 @@ public class ScryptPlayer : MonoBehaviour
 
 
         //lol this is bad
-        _fpController.IsInputBlockedByGameplay = InteractionRaycaster.IsInFullscreenInteraction;
+        if(_fpController != null) _fpController.IsInputBlockedByGameplay = MenuManager.IsMenuActive || InteractionRaycaster.IsInFullscreenInteraction;
     }
 }
