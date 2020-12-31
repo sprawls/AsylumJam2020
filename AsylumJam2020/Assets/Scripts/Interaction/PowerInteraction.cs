@@ -7,17 +7,29 @@ public class PowerInteraction : InteractionBase {
     [SerializeField] private List<PowerSource> _linkedPowerSources = default;
     [SerializeField] private Renderer _cableVisionRenderer = default;
 
-    [SerializeField] internal bool _isActive = false;
+    [SerializeField] private bool _isActive = false;
+
+    private static string ANIM_PARAM_SwitchActive = "SwitchesActive";
+    private static int ANIM_PARAM_SwitchActive_Hash = -1;
+
 
     #region ACCESSORS
 
-
+    public bool IsActive { 
+        get => _isActive;
+        set { 
+            _isActive = value;
+            Animator.SetBool(ANIM_PARAM_SwitchActive_Hash, value);
+        }
+    }
 
     #endregion
 
     #region LIFECYCLE
 
     protected override void Awake() {
+        ANIM_PARAM_SwitchActive_Hash = Animator.StringToHash(ANIM_PARAM_SwitchActive);
+
         base.Awake();
     }
 
@@ -43,7 +55,7 @@ public class PowerInteraction : InteractionBase {
             _cableVisionRenderer.material.color = CableVisioner.Powered_Color;
         }
 
-        if (_isActive) {
+        if (IsActive) {
             TogglePowerOnSource();
         }
     }
@@ -55,7 +67,7 @@ public class PowerInteraction : InteractionBase {
             _cableVisionRenderer.material.color = CableVisioner.Unpowered_Color;
         }
 
-        if(_isActive) {
+        if(IsActive) {
             TogglePowerOnSource();
         }
     }
@@ -72,7 +84,7 @@ public class PowerInteraction : InteractionBase {
         if(Powered) {
             base.Callback_OnInteracted();
 
-            _isActive = !_isActive;
+            IsActive = !IsActive;
             TogglePowerOnSource();
         }
 

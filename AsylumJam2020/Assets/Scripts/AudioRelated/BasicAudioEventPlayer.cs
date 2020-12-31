@@ -355,7 +355,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     {
         if (PowerInteractionType)
         {
-            if (powerInteractionSource._isActive)
+            if (powerInteractionSource.IsActive)
             {
                 soundMethod[2]();
             }
