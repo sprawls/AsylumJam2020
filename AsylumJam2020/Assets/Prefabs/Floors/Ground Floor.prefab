@@ -3196,6 +3196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _floorID: 0
+  _startsActive: 1
 --- !u!1 &8679581416679017066
 GameObject:
   m_ObjectHideFlags: 0

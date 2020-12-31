@@ -122,17 +122,17 @@ public class AudioManager : MonoBehaviour
             case 0:
                 break;
             case 1:
-                Entity[0].SetActive(true);
+                if(Entity.Length > 0) Entity[0].SetActive(true);
                 break;
             case 2:
-                Entity[1].SetActive(true);
+                if (Entity.Length > 1) Entity[1].SetActive(true);
                 SFXEntityFollowing.audioMixer.SetFloat("EntityFollowerVolume", 0.0f);
                 break;
             case 3:
-                Entity[2].SetActive(true);
+                if (Entity.Length > 2) Entity[2].SetActive(true);
                 break;
             case 4:
-                Entity[3].SetActive(true);
+                if (Entity.Length > 3) Entity[3].SetActive(true);
                 break;
 
             default:

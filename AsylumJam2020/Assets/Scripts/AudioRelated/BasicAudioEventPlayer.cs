@@ -20,7 +20,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
 
     bool canSearchInteraction;
     bool listenersOn;
-
+    private string _playerAudioTag = "PlayerAudio";
 
     [Space(20)]
     public bool RoomAmbiantType;
@@ -267,7 +267,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == _playerAudioTag)
         {
             canSearchInteraction = true;
 
@@ -280,7 +280,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == _playerAudioTag)
         {
             RemoveInteractionsListeners();
 
