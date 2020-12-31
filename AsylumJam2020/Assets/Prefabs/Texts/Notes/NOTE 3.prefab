@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: "I can't go back down.\nI can't find the exit.\nI can't see anything.\n\nI
+      value: "\nI can't go back down.\nI can't find the exit.\nI can't see anything.\n\nI
         can't get out\nI can't get out \nI can't get out \nI can't get out \nI can't
         get out\nI can't get out\nI can't get out\nI can't get out \nI can't get
         out\n\nSOMEONE GET ME THE FUCK OUT OF HERE"
