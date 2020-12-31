@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
         SetMixerVolumeParam();
         FadeSpeedMultiplier = 10f;
 
-        Entity = GameObject.FindGameObjectsWithTag("Entity");
+        //Entity = GameObject.FindGameObjectsWithTag("Entity");
 
         if (Entity != null && Entity.Length != 0)
         {
