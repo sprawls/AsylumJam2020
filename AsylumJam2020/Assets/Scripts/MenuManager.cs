@@ -25,8 +25,14 @@ public class MenuManager : MonoBehaviour
 
     void Update()
     {
-        if(!_isIntroPlaying && Input.GetMouseButtonDown(1)) {
-            StartIntro();
+        if(_isMenuActive && !_isIntroPlaying) {
+            if(Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Space)) {
+                StartIntro();
+            }
+        } else if(_isMenuActive) {
+            if(Input.GetKeyDown(KeyCode.Escape)) {
+                EndIntroEarly();
+            }
         }
     }
 
@@ -35,6 +41,10 @@ public class MenuManager : MonoBehaviour
         _introDirector.Play();
 
         _introDirector.stopped += Callback_OnIntroStopped;
+    }
+
+    private void EndIntroEarly() {
+        _introDirector.Stop();
     }
 
     private void Callback_OnIntroStopped(PlayableDirector director) {
