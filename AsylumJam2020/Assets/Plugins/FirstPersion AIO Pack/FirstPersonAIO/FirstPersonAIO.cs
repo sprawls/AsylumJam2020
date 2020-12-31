@@ -72,7 +72,7 @@ public class FirstPersonAIO : MonoBehaviour {
     #region Variables
 
     #region Input Settings
-    public bool controllerPauseState = false;
+    private bool controllerPauseState = false;
     #endregion
 
     #region Look Settings
@@ -163,7 +163,13 @@ public class FirstPersonAIO : MonoBehaviour {
     }
     public AdvancedSettings advanced = new AdvancedSettings();
     private CapsuleCollider capsule;
+    public bool IsInputBlockedByGameplay = false;
     public bool IsGrounded { get; private set; }
+    public bool ControllerPauseState {
+        get { return controllerPauseState || IsInputBlockedByGameplay; }
+        set { controllerPauseState = value; }
+    }
+
     Vector2 inputXY;
     public bool isCrouching;
     float yVelocity;
@@ -339,7 +345,7 @@ public class FirstPersonAIO : MonoBehaviour {
 
         #region Look Settings - Update
 
-            if(enableCameraMovement && !controllerPauseState){
+        if(enableCameraMovement && !ControllerPauseState){
             float mouseYInput = 0;
             float mouseXInput = 0;
             float camFOV = playerCamera.fieldOfView;
@@ -494,7 +500,7 @@ public class FirstPersonAIO : MonoBehaviour {
         }
 
 
-        if(playerCanMove && !controllerPauseState){
+        if(playerCanMove && !ControllerPauseState){
           fps_Rigidbody.velocity = MoveDirection+(Vector3.up * yVelocity);
             IsMoving = true;
 
@@ -740,10 +746,10 @@ public class FirstPersonAIO : MonoBehaviour {
     }
 
     public void ControllerPause(){
-        controllerPauseState = !controllerPauseState;
+        ControllerPauseState = !ControllerPauseState;
         if(lockAndHideCursor){
-            Cursor.lockState = controllerPauseState? CursorLockMode.None : CursorLockMode.Locked;
-            Cursor.visible = controllerPauseState;
+            Cursor.lockState = ControllerPauseState? CursorLockMode.None : CursorLockMode.Locked;
+            Cursor.visible = ControllerPauseState;
         }
     }
 
@@ -916,7 +922,7 @@ public class FirstPersonAIO : MonoBehaviour {
             GUILayout.Label("version: "+ versionNum,new GUIStyle(GUI.skin.label){alignment = TextAnchor.MiddleCenter});
             EditorGUILayout.Space();
 
-            if(t.controllerPauseState){GUILayout.Label("<b><color=#B40404>Controller Paused</color></b>",new GUIStyle(GUI.skin.label){alignment = TextAnchor.MiddleCenter, richText = true, fontSize = 16});}
+            if(t.ControllerPauseState){GUILayout.Label("<b><color=#B40404>Controller Paused</color></b>",new GUIStyle(GUI.skin.label){alignment = TextAnchor.MiddleCenter, richText = true, fontSize = 16});}
 
         #region Camera Setup
             EditorGUILayout.LabelField("",GUI.skin.horizontalSlider);

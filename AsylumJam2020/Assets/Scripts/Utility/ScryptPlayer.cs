@@ -13,6 +13,7 @@ public class ScryptPlayer : MonoBehaviour
     private static int SH_VAR_POSITION_ID = -1;
 
     private static Vector3 _position;
+    private FirstPersonAIO _fpController;
 
     public static Vector3 PlayerPosition {
         get { return _position;  }
@@ -20,6 +21,7 @@ public class ScryptPlayer : MonoBehaviour
 
     private void Awake() {
         SH_VAR_POSITION_ID = Shader.PropertyToID(SH_VAR_POSITION_STRING);
+        _fpController = GetComponent<FirstPersonAIO>();
     }
 
     private void Update() {
@@ -32,5 +34,9 @@ public class ScryptPlayer : MonoBehaviour
         }
 
         _position = _head.position;
+
+
+        //lol this is bad
+        _fpController.IsInputBlockedByGameplay = InteractionRaycaster.IsInFullscreenInteraction;
     }
 }
