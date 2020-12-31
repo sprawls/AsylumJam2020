@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Surfaces_00
+  m_Name: M_Surface_Carpet_00
   m_Shader: {fileID: 4800000, guid: 3edf0a640e3eb764a8c052eba2b8b24f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
