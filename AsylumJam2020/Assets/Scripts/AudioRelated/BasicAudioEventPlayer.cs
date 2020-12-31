@@ -88,7 +88,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     {
         if (!canSearchInteraction) return;
         
-        if (InteractionType || MixedType || OtherType)
+        if (InteractionType || MixedType || OtherType || OtherTypeLoop)
         {
             if (soundInteractionSource != null && !listenersOn)//(interactionRaycaster.CurrentInteraction != null && !listenersOn)
             {
@@ -403,9 +403,5 @@ public class BasicAudioEventPlayer : MonoBehaviour
         int randNumb = UnityEngine.Random.Range(0, OtherSounds.Length);
         audio.clip = OtherSounds[randNumb];
         audio.Play(0);
-    }
-    public void StopLoop()
-    {
-        audio.Stop();
     }
 }
