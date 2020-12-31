@@ -705,7 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cableVisionAnimator: {fileID: 5387435638486948626}
   _screenObject: {fileID: 228442978540459173}
-  BasicAudioEventPlayer: {fileID: 0}
+  BasicAudioEventPlayer: {fileID: 770019482089229805}
 --- !u!114 &222448384998593660
 MonoBehaviour:
   m_ObjectHideFlags: 0

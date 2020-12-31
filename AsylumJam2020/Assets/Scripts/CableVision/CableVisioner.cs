@@ -50,7 +50,7 @@ public class CableVisioner : MonoBehaviour
         Instance = this;
         _blockers = new List<GameObject>(4);
 
-        BasicAudioEventPlayer = GetComponent<BasicAudioEventPlayer>();
+        BasicAudioEventPlayer = GetComponentInChildren<BasicAudioEventPlayer>();
     }
     private void Start()
     {
