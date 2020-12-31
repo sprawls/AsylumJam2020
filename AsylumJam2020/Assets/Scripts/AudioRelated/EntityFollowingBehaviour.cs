@@ -54,6 +54,8 @@ public class EntityFollowingBehaviour : MonoBehaviour
 
     void RandomTimedEventCall()
     {
+        basicAudioEventPlayer.PlayRandomSounds();
+
         if (timeRemaining > 0)
         {
             timeRemaining -= Time.deltaTime;
