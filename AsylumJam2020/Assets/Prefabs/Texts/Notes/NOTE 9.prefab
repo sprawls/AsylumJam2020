@@ -10,16 +10,16 @@ PrefabInstance:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
       value: 'This is gonna sound fucking insane. But it''s the only explanation
-        I could think of.
+        I have.
 
 
-        I don''t think this building is only fucking
-        with my sense of perspective. It''s fucking with my sense of time, too.
+        I don''t think this building is only messing with my sense
+        of perspective. It''s fucking with my sense of time, too.
 
 
         When
         I change floors, the world outside isn''t changing. It''s AGING. Going back
-        and forth through time, just like I''m going back and forth along the stairwell.
+        and forth through time, just like I''m going back and forth along the stairwells.
 
 
         Batshit.
@@ -33,7 +33,7 @@ PrefabInstance:
 
 
         And
-        two is... Well... What the fuck is gonna happen to ME if I keep walking back
+        second of all... What the fuck is gonna happen to ME if I keep walking back
         and forth through time like this?'
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
