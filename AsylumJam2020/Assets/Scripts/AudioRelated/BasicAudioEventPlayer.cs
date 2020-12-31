@@ -8,7 +8,7 @@ using UnityEditor;
 [RequireComponent(typeof(AudioSource), typeof(SphereCollider), typeof(BoxCollider))]
 public class BasicAudioEventPlayer : MonoBehaviour
 {
-    [SerializeField]new AudioSource audio;
+    [SerializeField]new internal AudioSource audio;
 
     public bool LoopIsNotInterupted;
 
@@ -28,6 +28,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     public bool InteractionType;
     public bool MixedType;
     public bool OtherType;
+    public bool OtherTypeLoop;
 
     [Space(20)]
     public SphereCollider PlayerDetectionSphereCollider;
@@ -240,6 +241,19 @@ public class BasicAudioEventPlayer : MonoBehaviour
             audio.loop = false;
             audio.playOnAwake = false;
         }
+        else if (OtherTypeLoop)
+        {
+            PlayerDetectionBoxCollider.enabled = false;
+            PlayerDetectionSphereCollider.enabled = true;
+
+            PlayerDetectionSphereCollider.radius = maxDistanceToHear + 5f;
+            audio.playOnAwake = false;
+
+            if (this.transform.parent.GetComponent<InteractionBase>() != null)
+            {
+                soundInteractionSource = this.transform.parent.GetComponent<InteractionBase>();
+            }
+        }
         else
         {
             PlayerDetectionBoxCollider.enabled = false;
@@ -370,7 +384,7 @@ public class BasicAudioEventPlayer : MonoBehaviour
     //Ambiance
     public void StartAmbiantSound()
     {
-
+        
     }
     public void StopAmbiantSound()
     {
@@ -382,5 +396,16 @@ public class BasicAudioEventPlayer : MonoBehaviour
     {
         int randNumb = UnityEngine.Random.Range(0, OtherSounds.Length);
         audio.PlayOneShot(OtherSounds[randNumb]);
+    }
+
+    public void PlayLoop()
+    {
+        int randNumb = UnityEngine.Random.Range(0, OtherSounds.Length);
+        audio.clip = OtherSounds[randNumb];
+        audio.Play(0);
+    }
+    public void StopLoop()
+    {
+        audio.Stop();
     }
 }
