@@ -13,8 +13,8 @@ PrefabInstance:
         idiot thought it'd be a good idea to design this place with doors that automatically
         lock if the power goes off.\n\nHate to break it to you, but you'll need to
         flip all the breakers on each floor to get around. Unless you've got a sledgehammer
-        handy, I guess.\n\nGood luck out here guys, it's a real mess.\n\nYours truly,
-        \nA pissed-off stranger."
+        handy, I guess.\n\nGood luck out here guys, it's a real fuckin' mess.\n\nYours
+        truly, \nA pissed-off stranger."
       objectReference: {fileID: 0}
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_margin.y

@@ -10,16 +10,16 @@ PrefabInstance:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
       value: "I don't feel \"trapped\" by this building anymore. \n\nIt feels like
-        I've been consumed by it.\n\nIt's in the way all the walls are hot and wet
-        to the touch instead of cold and dusy. It's in the way this floor feels less
-        like a maze and more like a tangled string of intestines. It's in the way
-        this place just seems to get bigger and bigger as I become more and more
+        I'm being digested by it.\n\nIt's in the way all the walls are hot and wet
+        to the touch instead of cold and dusty. It's in the way this floor feels
+        less like a maze and more like a tangled string of intestines. It's in the
+        way this place just seems to get bigger and bigger as I become more and more
         decrepit.\n\nHell, I don't even think the mayday signal that brought me here
         in the first place was real anymore. I just think it was a lure. Like the
         kind angler fish use to bait smaller fish into getting too close for their
-        own fucking good.\n\nI was dumb enough to take the bait. Now I'm being digested
-        alive by concrete.\n\nAnd if I don't find a way to the top floor fast, Laura
-        won't ever see me again. Not even as a corpse."
+        own fucking good.\n\nI was dumb enough to take the bait. Now I'm being eaten 
+        alive by some concrete sarcophagus.\n\nIf I don't find a way to the top floor
+        fast, Laura won't even get to see me again as a corpse."
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder
