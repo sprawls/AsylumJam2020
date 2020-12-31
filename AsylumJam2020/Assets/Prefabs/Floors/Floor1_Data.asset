@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbed010e7abd2b84ab83f4ab430160cc, type: 3}
   m_Name: Floor1_Data
   m_EditorClassIdentifier: 
-  _skybox: {fileID: 2100000, guid: cb908deab50f8f749bcb8b530b049995, type: 2}
+  _skybox: {fileID: 2100000, guid: c34fe17c09aa5fb428a4821e84c29cde, type: 2}
   _sunPosition: {x: 0, y: 0, z: 0}
-  _sunRotation: {x: 0.0855449, y: -0.8204129, z: 0.111536756, w: 0.554224}
+  _sunRotation: {x: -0.040816423, y: 0.9198416, z: -0.0995207, w: -0.3772546}
   _sunColor: {r: 1, g: 1, b: 1, a: 1}
   _sunIntensity: 10
   _lightSlerpSpeed: 0.13
