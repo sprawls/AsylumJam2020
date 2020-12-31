@@ -316,7 +316,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 0.81
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -458,11 +458,11 @@ MonoBehaviour:
   HoverOffSounds: []
   InteractionONSounds:
   - {fileID: 8300000, guid: 05b8758ad58cf0948adc7591a57d425a, type: 3}
+  InteractionOffSounds:
   - {fileID: 8300000, guid: d655f64ecc688da4ab1520696bbc1d99, type: 3}
-  InteractionOffSounds: []
   InteractionFailSounds: []
   OtherSounds:
-  - {fileID: 8300000, guid: 5ca746131b43dbf439b98e1260346ae5, type: 3}
+  - {fileID: 8300000, guid: bb0a203e4f14f314abccb8a605460406, type: 3}
   PlayAudio:
     m_PersistentCalls:
       m_Calls: []

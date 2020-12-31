@@ -27,6 +27,7 @@ public class CableVisioner : MonoBehaviour
              
                 if (_cableVisionActive)
                 {
+                    BasicAudioEventPlayer.audio.volume = 1;
                     BasicAudioEventPlayer.PlayInteractionOnEvent.Invoke();
                     SelectStateOfSound();
                 }
@@ -55,6 +56,7 @@ public class CableVisioner : MonoBehaviour
     private void Start()
     {
         BasicAudioEventPlayer.audio.loop = true;
+        BasicAudioEventPlayer.audio.mute = false;
     }
 
     private void Update() {
@@ -80,7 +82,7 @@ public class CableVisioner : MonoBehaviour
         if (!isPlaying)
         {
             isPlaying = true;
-            BasicAudioEventPlayer.PlayInteractionOnEvent.Invoke();
+           // BasicAudioEventPlayer.PlayInteractionOnEvent.Invoke();
             BasicAudioEventPlayer.PlayLoop();
         }
         else
@@ -91,8 +93,9 @@ public class CableVisioner : MonoBehaviour
     }
     IEnumerator StopRadioSound()
     {
-        BasicAudioEventPlayer.PlayInteractionOffEvent.Invoke();
-        yield return new WaitForSeconds(0.25f);
+        //BasicAudioEventPlayer.PlayInteractionOffEvent.Invoke();
+        BasicAudioEventPlayer.audio.volume = 0;
+        yield return new WaitForSeconds(0.3f);
         BasicAudioEventPlayer.audio.Stop();
     }
 
