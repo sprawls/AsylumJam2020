@@ -116,7 +116,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SphereIntensity: 0.132
-    - _SphereMaskMax: 0.955
+    - _SphereMaskMax: 0.25
     - _SphereMaskMin: 1
     - _SphereMaskSize: 4.7
     - _SphereSize: 35.1
