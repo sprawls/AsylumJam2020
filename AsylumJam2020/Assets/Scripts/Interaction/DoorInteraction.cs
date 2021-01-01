@@ -5,8 +5,11 @@ using UnityEngine;
 public class DoorInteraction : StateInteraction
 {
     [Header("Door")]
+    [SerializeField] private GameObject _cableVisionDoor = default;
+    [SerializeField] private MeshRenderer _renderer = default;
     [SerializeField] private Transform _frontTransform;
     [SerializeField] private Transform _backTransform;
+
 
     private static string ANIM_PARAM_STATE_OPEN_FRONT = "IsOpenFront";
     private static string ANIM_PARAM_STATE_OPEN_BACK = "IsOpenBack";
@@ -15,9 +18,21 @@ public class DoorInteraction : StateInteraction
 
     #region LIFECYCLE
 
+    protected override void Initialize() {
+        if (!IsInit) {
+
+            ANIM_PARAM_STATE_OPEN_FRONT_HASH = Animator.StringToHash(ANIM_PARAM_STATE_OPEN_FRONT);
+            ANIM_PARAM_STATE_OPEN_BACK_HASH = Animator.StringToHash(ANIM_PARAM_STATE_OPEN_BACK);
+
+            if (_cableVisionDoor != null) {
+                if (AmountPowerSourceNeeded > 0) _cableVisionDoor.SetActive(true);
+                else _cableVisionDoor.SetActive(false);
+            }
+            base.Initialize();
+        }
+    }
+
     protected override void Awake() {
-        ANIM_PARAM_STATE_OPEN_FRONT_HASH = Animator.StringToHash(ANIM_PARAM_STATE_OPEN_FRONT);
-        ANIM_PARAM_STATE_OPEN_BACK_HASH = Animator.StringToHash(ANIM_PARAM_STATE_OPEN_BACK);
 
         base.Awake();
     }
@@ -64,10 +79,22 @@ public class DoorInteraction : StateInteraction
 
     public override void OnPoweredOn() {
         base.OnPoweredOn();
+
+        Initialize();
+
+        if (_cableVisionDoor != null) {
+            _renderer.material.color = CableVisioner.Powered_Color;
+        }
     }
 
     public override void OnPoweredOff() {
         base.OnPoweredOff();
+
+        Initialize();
+
+        if (_cableVisionDoor != null) {
+            _renderer.material.color = CableVisioner.Unpowered_Color;
+        }
     }
 
 

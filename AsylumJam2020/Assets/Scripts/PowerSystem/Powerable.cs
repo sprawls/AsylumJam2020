@@ -41,7 +41,8 @@ public class Powerable : MonoBehaviour
         get { return CurrentState == PowerState.Powered; }
     }
 
-    protected Animator Animator { get => _powerableAnimator; set => _powerableAnimator = value; }
+    protected Animator Animator { get => _powerableAnimator; private set => _powerableAnimator = value; }
+    protected int AmountPowerSourceNeeded { get => _amountPowerSourceNeeded; private set => _amountPowerSourceNeeded = value; }
     public bool IsInit { get => _isInit; private set => _isInit = value; }
 
     #endregion
@@ -122,11 +123,11 @@ public class Powerable : MonoBehaviour
 
     private void CheckPowered() {
         if (_togglePowerEveryChange) {
-            CurrentState = _amountPowerSourceNeeded % 2 == 0 ? PowerState.Unpowered :  PowerState.Powered;
+            CurrentState = AmountPowerSourceNeeded % 2 == 0 ? PowerState.Unpowered :  PowerState.Powered;
         } else {
-            if (_currentPowerSources.Count < _amountPowerSourceNeeded) {
+            if (_currentPowerSources.Count < AmountPowerSourceNeeded) {
                 CurrentState = PowerState.Unpowered;
-            } else if (_currentPowerSources.Count >= _amountPowerSourceNeeded) {
+            } else if (_currentPowerSources.Count >= AmountPowerSourceNeeded) {
                 CurrentState = PowerState.Powered;
             }
         }
