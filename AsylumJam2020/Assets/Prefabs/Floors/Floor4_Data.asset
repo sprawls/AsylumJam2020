@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbed010e7abd2b84ab83f4ab430160cc, type: 3}
   m_Name: Floor4_Data
   m_EditorClassIdentifier: 
-  _skybox: {fileID: 2100000, guid: cb908deab50f8f749bcb8b530b049995, type: 2}
+  _skybox: {fileID: 2100000, guid: 20683cfeea80a464e8aaae4e14718d95, type: 2}
   _sunPosition: {x: 0, y: 0, z: 0}
   _sunRotation: {x: 0.0855449, y: -0.8204129, z: 0.111536756, w: 0.554224}
-  _sunColor: {r: 1, g: 1, b: 1, a: 1}
-  _sunIntensity: 10
-  _lightIntensity: 100
-  _lightColor: {r: 1, g: 1, b: 1, a: 1}
+  _sunColor: {r: 0, g: 0, b: 0, a: 1}
+  _sunIntensity: 0
+  _lightIntensity: 5
+  _lightColor: {r: 0.8922465, g: 0.7971698, b: 1, a: 1}
   _lightSlerpSpeed: 0.13
-  _lightChangeSpeed: 0.1
+  _lightChangeSpeed: 1.2
   _lightAngleChange: {x: 55, y: 65}
   _lightAngleGap: {x: 0, y: 1}
