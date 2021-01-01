@@ -707,6 +707,25 @@ MonoBehaviour:
   _cableVisionAnimator: {fileID: 5387435638486948626}
   _screenObject: {fileID: 228442978540459173}
   BasicAudioEventPlayer: {fileID: 770019482089229805}
+--- !u!95 &6330064051018004389
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5878593240771007917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &222448384998593660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1202,9 +1221,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4448068258976056, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
   m_PrefabInstance: {fileID: 5877979790776458687}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5881133000518954579 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4288335847994348, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+--- !u!1 &5879089936576861673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1264833946912854, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
   m_PrefabInstance: {fileID: 5877979790776458687}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &5878593240771007917 stripped
@@ -1212,8 +1231,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1743903104223250, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
   m_PrefabInstance: {fileID: 5877979790776458687}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5879089936576861673 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1264833946912854, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
+--- !u!4 &5881133000518954579 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4288335847994348, guid: 2e62f5703e5f8d2488a5e1bc8433be41, type: 3}
   m_PrefabInstance: {fileID: 5877979790776458687}
   m_PrefabAsset: {fileID: 0}

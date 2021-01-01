@@ -15,8 +15,14 @@ public class ScryptPlayer : MonoBehaviour
     private static Vector3 _position;
     private FirstPersonAIO _fpController;
 
+    private static bool _stoppedBecauseEndOfGame = false;
+
     public static Vector3 PlayerPosition {
         get { return _position;  }
+    }
+
+    public static void StopControls() {
+        _stoppedBecauseEndOfGame = true;
     }
 
     private void Awake() {
@@ -37,6 +43,6 @@ public class ScryptPlayer : MonoBehaviour
 
 
         //lol this is bad
-        if(_fpController != null) _fpController.IsInputBlockedByGameplay = MenuManager.IsMenuActive || InteractionRaycaster.IsInFullscreenInteraction;
+        if(_fpController != null) _fpController.IsInputBlockedByGameplay = _stoppedBecauseEndOfGame || MenuManager.IsMenuActive || InteractionRaycaster.IsInFullscreenInteraction;
     }
 }
