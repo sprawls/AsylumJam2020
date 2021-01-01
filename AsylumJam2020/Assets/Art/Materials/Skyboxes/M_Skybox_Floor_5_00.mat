@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Skybox_GroundFloor_00
+  m_Name: M_Skybox_Floor_5_00
   m_Shader: {fileID: 4800000, guid: eb3c6fb598ded4c71b8968e1c40a3b4d, type: 3}
   m_ShaderKeywords: _HORIZONLINEBLENDMODE_LERP _SUNHALOBLENDMODE_ADD _VIEW_FINAL
   m_LightmapFlags: 0
@@ -30,14 +30,14 @@ Material:
     - _SunDiscMultiplier: 100000
     - _SunDiscMultiplierSharpness: 1200
     - _SunHaloBlendMode: 0
-    - _SunHaloContribution: 0.737
+    - _SunHaloContribution: 0.009
     - _SunHaloExponent: 250
     - _View: 0
     - __dirty: 0
     m_Colors:
-    - _HorizonLineColor: {r: 1, g: 1, b: 1, a: 0.8509804}
+    - _HorizonLineColor: {r: 0.74736017, g: 0.3443396, b: 1, a: 1}
     - _SkyGradientBottom: {r: 0.035, g: 0.035, b: 0.035, a: 1}
     - _SkyGradientTop: {r: 0, g: 0, b: 0, a: 1}
-    - _SunDiscColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SunHaloColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SunDiscColor: {r: 0.5372549, g: 0.21176471, b: 1, a: 1}
+    - _SunHaloColor: {r: 0.5369471, g: 0.21226418, b: 1, a: 1}
   m_BuildTextureStacks: []
