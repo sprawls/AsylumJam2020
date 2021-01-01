@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3036741243350412720
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 75519338015418010, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_text
+      value: "You are Devon Robinson. \n\nElectrician. \n\nSoon-to-be-husband. \n\nSooner-to-be-father.\n\nYou
+        were sent to sent to investigate the cause of these unknown power surges,
+        and ensure they do not re-occur until the building properly disconnected
+        from the local power grid."
+      objectReference: {fileID: 0}
+    - target: {fileID: 75519338015418010, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 714698508076053964, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_Name
+      value: OPENING P.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}

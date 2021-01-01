@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: "\nIMPORTANT P.S.A.\n\nDear fellow Renovator / Electrician / Repo man
+      value: "IMPORTANT P.S.A.\n\nDear fellow Renovator / Electrician / Repo man
         / etc.\n\nSome stupid fuckin' inbred thought it'd be a good idea to design
         this place with doors that automatically lock if the power goes off.\n\nHate
         to break it to you, but you'll need to flip all the breakers on each floor
@@ -24,6 +24,10 @@ PrefabInstance:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_fontStyle
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_HorizontalAlignment

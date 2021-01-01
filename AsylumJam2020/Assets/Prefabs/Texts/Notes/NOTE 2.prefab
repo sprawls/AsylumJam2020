@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: "\nYou know, the more I think about this place, the less it makes sense.\n\nI
+      value: "You know, the more I think about this place, the less it makes sense.\n\nI
         couldn't find any records on how old this place is, who built it, or who
         even legally OWNS the fucking thing.  Hell, I don't think my boss even knows
         who hired us to work here.\n\nIt's like the building just... Showed up one
@@ -19,6 +19,10 @@ PrefabInstance:
         or whatever, and asking them what kind of peyote they were on when they designed
         this shithole.\n\n...Christ, this place REALLY puts me on edge.  I just wanna
         get this job over and go home."
+      objectReference: {fileID: 0}
+    - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder

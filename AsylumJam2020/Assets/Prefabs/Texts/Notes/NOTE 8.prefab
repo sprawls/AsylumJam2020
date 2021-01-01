@@ -9,10 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: '
-
-
-        I''m not alone in here.'
+      value: I'm not alone in here.
       objectReference: {fileID: 0}
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_fontSize
@@ -25,6 +22,10 @@ PrefabInstance:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_fontSizeBase
       value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder

@@ -9,10 +9,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: '
-
-        The world outside changed again. And it''s even less familiar
-        than before.
+      value: 'The world outside changed again. And it''s even less familiar than
+        before.
 
 
         Part of me wants to break a window and jump. But there''s
@@ -36,6 +34,10 @@ PrefabInstance:
 
         I''ll
         do anything to see them again.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder

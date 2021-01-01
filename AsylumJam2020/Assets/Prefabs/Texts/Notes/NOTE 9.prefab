@@ -9,34 +9,37 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: '
-
-        This is gonna sound fucking insane. But it''s the only explanation
-        I have.
+      value: 'This is gonna sound fucking insane. But it''s the only explanation
+        I have to make sense of what''s happening to me.
 
 
-        I don''t think this building is only messing with my sense
-        of perspective. It''s fucking with my sense of time, too.
+        I don''t think
+        this building is only messing with my sense of perspective. It''s fucking
+        with my sense of time, too.
 
 
-        When
-        I change floors, the world outside isn''t changing. It''s AGING. Going back
-        and forth through time, just like I''m going back and forth along the stairwells.
+        When I change floors, the world outside
+        isn''t changing. It''s AGING. Going back and forth through time, just like
+        I''m going back and forth along the stairwells.
 
 
-        Batshit.
-        I know. But like I said, it''s the only thing that makes sense. And if I''m
-        right, this means I have two more things to worry about.
+        Batshit. I know.
+        But like I said, it''s the only thing that makes sense. And if I''m right,
+        this means I have two more things to worry about.
 
 
-        One, is
-        what "time" my SOS will end up in, assuming I reach the top. If it triggers
-        at a time where, say, radios don''t exist anymore, I''m boned.
+        One, is what
+        "time" my SOS will end up in, assuming I reach the top. If it triggers at
+        a time where, say, radios don''t exist anymore, I''m boned.
 
 
         And
         second of all... What the fuck is gonna happen to ME if I keep walking back
         and forth through time like this?'
+      objectReference: {fileID: 0}
+    - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7fe1b1a97335c64dad765478a52d9cc
+guid: 6679a1a221ccd4d478ea558523b0c42e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Bilbo
+  - Digitalism
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

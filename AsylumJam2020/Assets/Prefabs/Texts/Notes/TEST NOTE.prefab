@@ -9,40 +9,40 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: '
-
-        I should have known I wouldn''t make it.
-
-
-        This station''s
-        equipment barely got my signal out. Even if it DOES get picked up by the
-        outside world, there''s no way in hell help will be here in time. Just writing
-        this down is taking everything I''ve got.
+      value: 'Radio equipment''s so old, I could barely get a signal out. I don''t
+        think anyone''s gonna be picking up what I put out. And even if they do,
+        there''s no way in hell they''ll be getting me out of here .
 
 
-        So, if anyone finds this,please
-        find my family, and pass this along to them.
+        Door''s
+        gone. Window''s unbreakable. And just writing this down is taking everything
+        I''ve got. I''ll be kicking the bucket any second now.
 
 
-        To my girlfriend Laura,
-        I love you with all my heart. I''m sorry I couldn''t be there for the wedding,
-        or to see Ezra be born.
+        On the off
+        chance anyone finds this here, and somehow figures a way to leave... Please
+        find my family, and pass this message along to them.
 
 
-        To the son I''ve never met... Daddy''s
-        sorry he''ll never be able to tell you so face to face. But I''m proud of
-        you. And I believe in you.
+        To my girlfriend
+        Laura, I love you with all my heart. I''m sorry I couldn''t be there to see
+        our son''s birth, or to raise them with you.
 
 
-        Now then... I''m gonna spend my last
-        breaths singing Ezra happy birthday on the radio. Fingers crossed he gets
-        to hear it, somehow. Some day. And with a little luck, this place''ll finish
-        me off before hunger will..
+        To the son I''ve never
+        met... Daddy''s sorry he''ll never be able to tell you that face to face.
+        But I''m proud of you. And I believe in you.
+
+
+        ...Alright. I''m gonna
+        spend what last breaths I''ve got left singing my son happy birthday on the
+        radio, and hope old age kills me before I starve.
 
 
         Yours truly,
 
-        Devon Robinson'
+        Devon
+        Robinson'
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder
@@ -90,7 +90,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5669291339830271636, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_Name
-      value: NOTE 13 (FINAL NOTE) Copy
+      value: TEST NOTE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}

@@ -9,31 +9,32 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_text
-      value: '
-
-        This just keeps getting worse and worse. I''ve got a time
-        limit on my lifespan now.
+      value: 'This just keeps getting worse and worse. I''ve got a time limit on
+        my lifespan now.
 
 
-        If that person (holy shit do I ever hope
-        it''s just a person) I keep hearing in here doesn''t kill me first, thirst
-        or hunger will. I haven''t found any vending machines, or food, or bathrooms
-        or drinking fountains or ANYTHING in here. Empty as my stomach''s about to
-        be.
+        If that person (holy shit do I ever hope it''s
+        just a person) I keep hearing in here doesn''t kill me first, thirst or hunger
+        will. I haven''t found any vending machines, or food, or bathrooms or drinking
+        fountains or ANYTHING in here. Empty as my stomach''s about to be.
 
 
-        And what''s worse is... Shit. I don''t know how to put it,
-        but I''m starting to feel weak. Almost like I''ve been stuck here a few days,
-        not just a few hours.
+        And
+        what''s worse is... Shit. I don''t know how to put it, but I''m starting
+        to feel weak. Almost like I''ve been stuck here a few days, not just a few
+        hours.
 
 
-        And I just keep getting weaker every time
-        I go up a floor. Almost like the place was designed to make me feel as shitty
-        as humanly possible.
+        And I just keep getting weaker every time I go up a floor.
+        Almost like the place was designed to make me feel as shitty as humanly possible.
 
 
-        ...I wonder if this is how dad felt, after
-        he started his chemo treatments.'
+        ...I
+        wonder if this is how dad felt, after he started his chemo treatments.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 958708156646597004, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 1155232914100724444, guid: c2b6e63ca6ae3f34cacc54243946e2b9, type: 3}
       propertyPath: m_RootOrder
