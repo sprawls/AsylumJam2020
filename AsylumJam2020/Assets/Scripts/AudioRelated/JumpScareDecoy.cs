@@ -35,7 +35,8 @@ public class JumpScareDecoy : MonoBehaviour
     public void PlayRandomSounds()
     {
         int randNumb = UnityEngine.Random.Range(0, OtherSounds.Length);
-        audio.PlayOneShot(OtherSounds[randNumb]);
+   
+        audio.PlayOneShot(OtherSounds[randNumb],1);
     }
 
 }
