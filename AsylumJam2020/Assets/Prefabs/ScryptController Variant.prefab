@@ -615,6 +615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _camera: {fileID: 5881133000518954579}
+  _light: {fileID: 471725550942766798}
   _geometryMask:
     serializedVersion: 2
     m_Bits: 65

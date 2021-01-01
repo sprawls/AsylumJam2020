@@ -22,6 +22,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OPENING P.3
       objectReference: {fileID: 0}
+    - target: {fileID: 714698508076053964, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1230739219657646045, guid: ea08ca5ea9fcc174aabccc0aac3d71cc, type: 3}
       propertyPath: m_RootOrder
       value: 0

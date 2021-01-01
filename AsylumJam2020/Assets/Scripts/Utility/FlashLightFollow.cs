@@ -5,6 +5,7 @@ using UnityEngine;
 public class FlashLightFollow : MonoBehaviour
 {
     [SerializeField] private Transform _camera;
+    [SerializeField] private Light _light;
     [SerializeField] private LayerMask _geometryMask;
     [SerializeField, Range(0.01f, 1f)] private float _slerpFactor;
 
@@ -13,7 +14,6 @@ public class FlashLightFollow : MonoBehaviour
     [SerializeField] private Vector2 _lightAngleChange;
     [SerializeField] private Vector2 _lightAngleGapChange;
 
-    private Light _light;
     private RaycastHit[] _hitsCache;
     private Vector3 _targetPoint;
     private Quaternion _prevRot;
@@ -29,7 +29,6 @@ public class FlashLightFollow : MonoBehaviour
 
     private void Awake() {
         _hitsCache = new RaycastHit[4];
-        Light = GetComponent<Light>();
         _prevRot = transform.rotation;
 
         CachedLightIntensity = Light.intensity;
