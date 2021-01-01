@@ -47,6 +47,9 @@ public class FloorManager : MonoBehaviour {
                 _sunObject.color = floorData.SunColor;
                 _sunObject.intensity = floorData.SunIntensity;
 
+                _flashlight.Light.intensity = floorData.LightIntensity;
+                _flashlight.CachedLightIntensity = floorData.LightIntensity;
+                _flashlight.Light.color = floorData.LightColor;
                 _flashlight.SlerpFactor = floorData.LightSlerpSpeed;
                 _flashlight.LightChangeSpeed = floorData.LightChangeSpeed;
                 _flashlight.LightAngleChange = floorData.LightAngleChange;

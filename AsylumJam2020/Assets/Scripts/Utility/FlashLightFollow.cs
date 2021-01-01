@@ -24,13 +24,15 @@ public class FlashLightFollow : MonoBehaviour
     public float LightChangeSpeed { get => _lightChangeSpeed; set => _lightChangeSpeed = value; }
     public Vector2 LightAngleChange { get => _lightAngleChange; set => _lightAngleChange = value; }
     public Vector2 LightAngleGapChange { get => _lightAngleGapChange; set => _lightAngleGapChange = value; }
+    public Light Light { get => _light; private set => _light = value; }
+    public float CachedLightIntensity { get => _cachedLightIntensity; set => _cachedLightIntensity = value; }
 
     private void Awake() {
         _hitsCache = new RaycastHit[4];
-        _light = GetComponent<Light>();
+        Light = GetComponent<Light>();
         _prevRot = transform.rotation;
 
-        _cachedLightIntensity = _light.intensity;
+        CachedLightIntensity = Light.intensity;
     }
 
 
@@ -43,21 +45,21 @@ public class FlashLightFollow : MonoBehaviour
 
     private void UpdateLight() {
         //Intensity
-        float intensity = CableVisioner.IsInCableVision ? 0f : _cachedLightIntensity;
-        _light.intensity = Mathf.Lerp(_light.intensity, intensity, 0.18f);
+        float intensity = CableVisioner.IsInCableVision ? 0f : CachedLightIntensity;
+        Light.intensity = Mathf.Lerp(Light.intensity, intensity, 0.18f);
 
         //Spot
         float lerpValue = Mathf.PerlinNoise(Time.time * LightChangeSpeed, Time.time * LightChangeSpeed);
         float newSpotAngle = Mathf.Lerp(LightAngleChange.x, LightAngleChange.y, lerpValue);
-        _light.spotAngle = newSpotAngle;
+        Light.spotAngle = newSpotAngle;
 
         float innerSpotAngleGap = Mathf.Lerp(LightAngleGapChange.x, LightAngleGapChange.y, lerpValue);
-        _light.innerSpotAngle = newSpotAngle - innerSpotAngleGap;
+        Light.innerSpotAngle = newSpotAngle - innerSpotAngleGap;
     }
 
     private void UpdateTarget() {
         Ray ray = new Ray(_camera.position, _camera.forward);
-        int amtHits = Physics.RaycastNonAlloc(ray, _hitsCache, _light.range, _geometryMask, QueryTriggerInteraction.Ignore);
+        int amtHits = Physics.RaycastNonAlloc(ray, _hitsCache, Light.range, _geometryMask, QueryTriggerInteraction.Ignore);
         if (amtHits > 0) {
             float closest = Mathf.Infinity;
             for(int i = 0; i < amtHits; ++i) {
@@ -69,7 +71,7 @@ public class FlashLightFollow : MonoBehaviour
                 }
             }
         } else {
-            _targetPoint = _camera.position + _camera.forward * _light.range;
+            _targetPoint = _camera.position + _camera.forward * Light.range;
         }
         //Debug.DrawLine(_camera.position, _targetPoint, Color.red, 1f, false);
         //Debug.Log("New Target Position : " + _targetPoint);

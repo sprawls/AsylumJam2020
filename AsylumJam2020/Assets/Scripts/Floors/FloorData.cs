@@ -13,6 +13,8 @@ public class FloorData : ScriptableObject
     [SerializeField] private float _sunIntensity;
 
     [Header("FlashLight")]
+    [SerializeField] private float _lightIntensity = 100f;
+    [SerializeField] private Color _lightColor = Color.white;
     [SerializeField] private float _lightSlerpSpeed = 0.13f;
     [SerializeField] private float _lightChangeSpeed = 0.1f;
     [SerializeField] private Vector2 _lightAngleChange = new Vector2(55, 65);
@@ -25,6 +27,8 @@ public class FloorData : ScriptableObject
     public Color        SunColor { get => _sunColor; set => _sunColor = value; }
     public float        SunIntensity { get => _sunIntensity; set => _sunIntensity = value; }
 
+    public float    LightIntensity { get => _lightIntensity; set => _lightIntensity = value; }
+    public Color    LightColor { get => _lightColor; set => _lightColor = value; }
     public float    LightSlerpSpeed { get => _lightSlerpSpeed; set => _lightSlerpSpeed = value; }
     public float    LightChangeSpeed { get => _lightChangeSpeed; set => _lightChangeSpeed = value; }
     public Vector2  LightAngleChange { get => _lightAngleChange; set => _lightAngleChange = value; }
