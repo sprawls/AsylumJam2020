@@ -17,9 +17,9 @@ MonoBehaviour:
   _sunRotation: {x: 0.05480394, y: 0.8522878, z: 0.091203645, w: -0.5121366}
   _sunColor: {r: 1, g: 1, b: 1, a: 1}
   _sunIntensity: 10
-  _lightIntensity: 100
-  _lightColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
+  _lightIntensity: 50
+  _lightColor: {r: 1, g: 1, b: 1, a: 1}
   _lightSlerpSpeed: 0.13
-  _lightChangeSpeed: 0.1
+  _lightChangeSpeed: 0.5
   _lightAngleChange: {x: 55, y: 65}
   _lightAngleGap: {x: 0, y: 1}
